@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /send.php
 
-Sitemap: http://fermaruna.ru/sitemap.xml
+Sitemap: https://fermaruna.ru/sitemap.xml
