@@ -9,6 +9,7 @@
 Сайт: [http://fermaruna.ru](http://fermaruna.ru) · Зеркало GitHub Pages: [https://bestdeejay-design.github.io/fermaruna/](https://bestdeejay-design.github.io/fermaruna/)
 
 📖 План развития хозяйства: [docs/PLAN.md](docs/PLAN.md) — от идеи до самофинансируемой фермы.
+🌐 Онлайн-чтение (HTML, GitHub Pages): [plan.html](https://bestdeejay-design.github.io/fermaruna/plan.html) — план, аудит и шаг 1 по 1500 га на одной странице.
 
 Язык сайта: русский.
 

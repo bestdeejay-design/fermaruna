@@ -1,0 +1,100 @@
+/* Стили HTML-версии документов фермы (plan.html) */
+@font-face {
+  font-family: 'Alegreya';
+  src: url('../assets/fonts/alegreya-cyrillic-wght-normal.woff2') format('woff2');
+  font-weight: 100 900; font-style: normal; unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Alegreya';
+  src: url('../assets/fonts/alegreya-latin-wght-normal.woff2') format('woff2');
+  font-weight: 100 900; font-style: normal;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('../assets/fonts/manrope-cyrillic-wght-normal.woff2') format('woff2');
+  font-weight: 100 900; font-style: normal; unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('../assets/fonts/manrope-latin-wght-normal.woff2') format('woff2');
+  font-weight: 100 900; font-style: normal;
+}
+
+:root {
+  --ink: #26312b;
+  --muted: #5d6b62;
+  --paper: #faf8f2;
+  --card: #ffffff;
+  --line: #dfe3da;
+  --accent: #3d6b45;
+  --accent-soft: #eef3ec;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; padding: 0 1.25rem 5rem;
+  background: var(--paper); color: var(--ink);
+  font-family: 'Manrope', 'Segoe UI', system-ui, sans-serif;
+  font-size: 1.02rem; line-height: 1.65;
+}
+main { max-width: 880px; margin: 0 auto; }
+h1, h2, h3, h4 {
+  font-family: 'Alegreya', Georgia, serif;
+  line-height: 1.25; color: var(--ink);
+  margin: 2.2em 0 0.6em;
+}
+h1 { font-size: 2rem; margin-top: 1.2em; }
+h2 { font-size: 1.55rem; border-bottom: 1px solid var(--line); padding-bottom: 0.3em; }
+h3 { font-size: 1.22rem; }
+p, li { max-width: 75ch; }
+a { color: var(--accent); }
+code {
+  background: var(--accent-soft); border-radius: 4px;
+  padding: 0.1em 0.35em; font-size: 0.88em;
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+}
+pre {
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; padding: 1rem 1.2rem; overflow-x: auto;
+}
+pre code { background: none; padding: 0; }
+blockquote {
+  margin: 1.2em 0; padding: 0.7em 1.2em;
+  background: var(--accent-soft); border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0; color: var(--ink);
+}
+blockquote p { max-width: none; }
+hr { border: none; border-top: 2px solid var(--line); margin: 3em 0; }
+
+/* Таблицы */
+table {
+  width: 100%; border-collapse: collapse; margin: 1.2em 0;
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 10px; overflow: hidden; font-size: 0.88rem;
+  display: table;
+}
+th, td { padding: 0.55em 0.75em; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); font-weight: 700; }
+tr:last-child td { border-bottom: none; }
+
+/* Оглавление */
+#TOC {
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 12px; padding: 1.2rem 1.6rem; margin: 1.5rem 0;
+  font-size: 0.92rem;
+}
+#TOC > ul { margin: 0.4em 0 0; padding-left: 1.2em; list-style: none; }
+#TOC > ul > li { margin: 0.35em 0; font-weight: 600; }
+#TOC ul ul { padding-left: 1.2em; list-style: disc; }
+#TOC ul ul li { font-weight: 400; }
+#TOC::before {
+  content: 'Содержание';
+  font-family: 'Alegreya', Georgia, serif; font-weight: 700;
+  font-size: 1.15rem; display: block; margin-bottom: 0.2em;
+}
+
+header#title-block-header h1.title {
+  font-size: 1.9rem; margin: 2.2rem 0 0.4rem;
+}
+header#title-block-header { border-bottom: 2px solid var(--accent); padding-bottom: 1.2rem; margin-bottom: 1.5rem; }

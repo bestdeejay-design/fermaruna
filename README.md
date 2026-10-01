@@ -9,6 +9,7 @@ Static site of the organic farm Runskaya in the upper Volga, Tver region. Potato
 Live site: [http://fermaruna.ru](http://fermaruna.ru) · GitHub Pages mirror: [https://bestdeejay-design.github.io/fermaruna/](https://bestdeejay-design.github.io/fermaruna/)
 
 📖 Farm development plan: [docs/PLAN.md](docs/PLAN.md) — from idea to a self-funded farm (in Russian).
+🌐 Read online (HTML, GitHub Pages): [plan.html](https://bestdeejay-design.github.io/fermaruna/plan.html) — plan, audit and land step 1 on one page.
 
 Site language: Russian. This README is in English for contributors.
 
