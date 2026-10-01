@@ -60,14 +60,13 @@ SITE_BASE_URL=http://fermaruna.ru python3 scripts/build.py
 
 ## Публикация
 
-Собрать, затем загрузить корень репозитория (статический результат) на Apache-хостинг с PHP 8.1. Общая схема:
+Полная процедура и правила — **[DEPLOY.md](DEPLOY.md)**; правила для агентов — [AGENTS.md](AGENTS.md). Коротко:
 
 ```bash
-python3 scripts/build.py
-rsync -av --exclude='.git' ./ user@host:/path/to/www/
+./scripts/deploy.sh          # сборка → dry-run → подтверждение → rsync → проверка URL
 ```
 
-Скопировать `config.example.php` в `config.php` на сервере и вписать адрес для заявок. CI не настроен, публикация вручную.
+Хостинг: SpaceWeb, SSH-алиас `sweb-fermaruna` (из `~/.ssh/config`), веб-корень `fermaruna_ru/public_html`. Инварианты: без `--delete`, серверный `config.php` не трогать, сначала dry-run, после — проверка живых URL. Зеркало GitHub Pages собирается из `main` автоматически; источник Pages должен быть `main` (проверка и troubleshooting — в DEPLOY.md). `config.php` (адрес почты формы) уже настроен на сервере. CI не настроен, публикация — вручную или скриптом.
 
 ## Обработчик формы
 

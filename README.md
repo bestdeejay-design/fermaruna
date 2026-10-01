@@ -60,14 +60,13 @@ The script rewrites `index.html`, section pages, `sitemap.xml`, `robots.txt`, `m
 
 ## Deploy
 
-Build, then upload the repo root (static output) to Apache hosting with PHP 8.1. Generic shape:
+Full procedure and rules — **[DEPLOY.md](DEPLOY.md)**; agent-facing rules — [AGENTS.md](AGENTS.md). Short version:
 
 ```bash
-python3 scripts/build.py
-rsync -av --exclude='.git' ./ user@host:/path/to/www/
+./scripts/deploy.sh          # build → dry-run → confirm → rsync → URL check
 ```
 
-Copy `config.example.php` to `config.php` on the server and set the recipient address. No CI is wired; deploys are manual.
+Hosting: SpaceWeb, SSH alias `sweb-fermaruna` (from `~/.ssh/config`), web root `fermaruna_ru/public_html`. Invariants: no `--delete`, never touch the server-side `config.php`, dry-run first, verify live URLs after. The GitHub Pages mirror builds from `main` automatically; the Pages source must be `main` (check and troubleshooting — in DEPLOY.md). `config.php` (form recipient) is already configured on the server. No CI; deploys are manual or via the script.
 
 ## Form endpoint
 
