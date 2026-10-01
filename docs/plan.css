@@ -116,12 +116,13 @@ hr { border: none; border-top: 2px solid var(--line); margin: 3em 0; }
 
 /* ── Таблицы ───────────────────────────────────────────── */
 table {
-  width: 100%; border-collapse: collapse; margin: 1.2em 0;
+  display: block; width: 100%; border-collapse: collapse; margin: 1.2em 0;
   background: var(--card); border: 1px solid var(--line);
-  font-size: 0.86rem;
+  font-size: 0.86rem; overflow-x: auto; -webkit-overflow-scrolling: touch;
 }
 th, td { padding: 0.55em 0.75em; border: 1px solid var(--line); text-align: left; vertical-align: top; }
 th { background: var(--accent-soft); font-weight: 700; }
+html { overflow-wrap: break-word; }
 
 /* ── Карты и иллюстрации ───────────────────────────────── */
 figure { margin: 1.8em 0; }
