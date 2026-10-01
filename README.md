@@ -85,6 +85,10 @@ printf '\n\n---\n\n%s\n\n---\n\n%s\n' "$(cat docs/AUDIT-2026-10.md)" "$(cat docs
 pandoc -f gfm -s --toc --toc-depth=2 --template=docs/plan-template.html \
   --metadata title="Ферма «Рунская» — план развития хозяйства" \
   -c docs/plan.css -o plan.html /tmp/plan-merged.md
+# ссылки на .md → GitHub-блобы; ../staffhouse.html → корень; пути картинок → корень сайта
+sed -i '' -e 's|href="\([A-Z][^"]*\.md\)"|href="https://github.com/bestdeejay-design/fermaruna/blob/main/docs/\1"|g' \
+  -e 's|href="../staffhouse.html"|href="staffhouse.html"|g' \
+  -e 's|src="../assets/|src="assets/|g' plan.html
 ```
 
 ## SEO note

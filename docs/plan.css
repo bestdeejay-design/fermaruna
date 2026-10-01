@@ -123,6 +123,14 @@ table {
 th, td { padding: 0.55em 0.75em; border: 1px solid var(--line); text-align: left; vertical-align: top; }
 th { background: var(--accent-soft); font-weight: 700; }
 
+/* ── Карты и иллюстрации ───────────────────────────────── */
+figure { margin: 1.8em 0; }
+.content img {
+  display: block; width: 100%; height: auto;
+  border: 1px solid var(--line); border-radius: 10px; background: var(--card);
+}
+figcaption { font-size: 0.82rem; line-height: 1.45; color: var(--muted); margin-top: 0.55em; }
+
 /* ── Кнопка «наверх» ───────────────────────────────────── */
 #toTop {
   position: fixed; right: 1.4rem; bottom: 1.4rem; z-index: 10;
