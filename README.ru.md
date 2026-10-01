@@ -75,7 +75,7 @@ rsync -av --exclude='.git' ./ user@host:/path/to/www/
 
 ## Документы проекта (`docs/`)
 
-`docs/PLAN.md` — план развития хозяйства · `docs/AUDIT-2026-10.md` — аудит плана · `docs/LAND-STEP-1.md` — шаг 1 по освоению 1500 га. Читаются на GitHub как Markdown; HTML-версия одной страницей с боковым оглавлением — `plan.html` в корне, открывается на GitHub Pages: <https://bestdeejay-design.github.io/fermaruna/plan.html>.
+`docs/PLAN.md` — план развития хозяйства · `docs/AUDIT-2026-10.md` — аудит плана · `docs/LAND-STEP-1.md` — шаг 1 по освоению 1500 га. Читаются на GitHub как Markdown; HTML-версия одной страницей с боковым оглавлением — `plan.html` в корне, открывается на GitHub Pages: <https://bestdeejay-design.github.io/fermaruna/plan.html>. Эскизы стафф-хауса (планы, фасады, очереди) — <https://bestdeejay-design.github.io/fermaruna/staffhouse.html>.
 
 Пересборка `plan.html` после правок документов (нужен pandoc):
 

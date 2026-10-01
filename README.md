@@ -75,7 +75,7 @@ Copy `config.example.php` to `config.php` on the server and set the recipient ad
 
 ## Project docs (`docs/`)
 
-`docs/PLAN.md` — farm development plan · `docs/AUDIT-2026-10.md` — plan audit · `docs/LAND-STEP-1.md` — land step 1 (all in Russian). They read as Markdown on GitHub; the one-page HTML version with a sidebar TOC is `plan.html` at the repo root, served by GitHub Pages: <https://bestdeejay-design.github.io/fermaruna/plan.html>.
+`docs/PLAN.md` — farm development plan · `docs/AUDIT-2026-10.md` — plan audit · `docs/LAND-STEP-1.md` — land step 1 (all in Russian). They read as Markdown on GitHub; the one-page HTML version with a sidebar TOC is `plan.html` at the repo root, served by GitHub Pages: <https://bestdeejay-design.github.io/fermaruna/plan.html>. Staff house concept sketches (plans, facades, build stages) — <https://bestdeejay-design.github.io/fermaruna/staffhouse.html>.
 
 Rebuild `plan.html` after editing the docs (requires pandoc):
 

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Стафф-хаус 300 м² — эскизы · Ферма «Рунская»</title>
+<style>
+  :root {
+    --ink:#26312b; --muted:#5d6b62; --paper:#faf8f2; --card:#fff;
+    --line:#dfe3da; --accent:#3d6b45; --accent-soft:#eef3ec;
+    --bed:#eef3ec; --kitchen:#fbf3dd; --bath:#e6eff5; --tech:#f1ede1; --office:#f3ecf2; --corr:#f7f6f0;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink);
+    font-family:'Manrope','Segoe UI',system-ui,sans-serif; font-size:1.02rem; line-height:1.6; }
+  main { max-width:1020px; margin:0 auto; padding:2rem 1.25rem 5rem; }
+  h1,h2,h3 { font-family:'Alegreya',Georgia,serif; line-height:1.25; margin:1.8em 0 .5em; }
+  h1 { font-size:1.9rem; margin-top:.5em; } h2 { font-size:1.45rem; border-bottom:1px solid var(--line); padding-bottom:.3em; }
+  a { color:var(--accent); }
+  .lede { font-size:1.05rem; color:var(--ink); }
+  .note { background:var(--accent-soft); border-left:4px solid var(--accent); border-radius:0 8px 8px 0; padding:.8em 1.1em; margin:1.2em 0; }
+  .warn { background:#fdf3e7; border-left:4px solid #c07f2a; border-radius:0 8px 8px 0; padding:.8em 1.1em; margin:1.2em 0; }
+  figure { margin:1.4em 0; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:1rem; overflow-x:auto; }
+  figcaption { color:var(--muted); font-size:.9rem; margin-top:.6rem; }
+  svg text { font-family:'Manrope',system-ui,sans-serif; }
+  table { width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--line); font-size:.9rem; margin:1.2em 0; }
+  th,td { padding:.5em .7em; border:1px solid var(--line); text-align:left; vertical-align:top; }
+  th { background:var(--accent-soft); }
+  .legend { display:flex; flex-wrap:wrap; gap:.5rem 1.2rem; font-size:.85rem; margin:.8rem 0 0; }
+  .legend span::before { content:''; display:inline-block; width:.95em; height:.95em; border:1px solid var(--line); border-radius:3px; margin-right:.4em; vertical-align:-1px; }
+  .lg-bed::before { background:var(--bed);} .lg-kit::before { background:var(--kitchen);} .lg-bath::before { background:var(--bath);}
+  .lg-tech::before { background:var(--tech);} .lg-off::before { background:var(--office);} .lg-corr::before { background:var(--corr);}
+  .back { font-size:.95rem; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; }
+  @media (max-width:820px){ .grid2 { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<main>
+<p class="back"><a href="plan.html">← План развития хозяйства</a> · <a href="https://github.com/bestdeejay-design/fermaruna/blob/main/docs/PLAN.md">docs/PLAN.md, раздел 8</a></p>
+
+<h1>Стафф-хаус 300 м² — эскизная концепция</h1>
+<p class="lede">Одноэтажный дом 20 × 15 м из своего пиломатериала: 8 спален (16 мест), кухня-столовая на всю команду, 4 санузла, офис, технические помещения. Строится очередями: первой очередью сдаётся западное крыло ≈ 100 м².</p>
+
+<div class="warn"><strong>Это эскиз, не рабочий проект.</strong> Цель — «примерно визуально понимать, что может получиться»: габариты, состав и взаимное расположение помещений. Расстановку дверей, окон по сторонам света, мебель, вентиляцию и конструктив делает конструктор в рабочем проекте (ориентир 40–80 тыс ₽) — начинать после выбора ядра застройки в <a href="https://github.com/bestdeejay-design/fermaruna/blob/main/docs/LAND-STEP-1.md">LAND-STEP-1</a>.</div>
+
+<h2>1. Габариты и объём</h2>
+<table>
+  <tr><th>Параметр</th><th>Значение</th></tr>
+  <tr><td>Габариты в осях</td><td>20,0 × 15,0 м (пятно застройки 300 м²)</td></tr>
+  <tr><td>Этажность</td><td>1 этаж + холодный чердак</td></tr>
+  <tr><td>Высота стен / конька</td><td>3,0 м / ≈ 6,5 м (двускатная кровля, уклон ≈ 25°)</td></tr>
+  <tr><td>Конструкция</td><td>Каркас из собственного пиломатериала; утепление 200 мм; сваи/мелкозаглублённая лента</td></tr>
+  <tr><td>Вместимость</td><td>8 спален × 2 чел = 16 спальных мест (1-я очередь — 6–8 чел)</td></tr>
+  <tr><td>Отапливаемый объём</td><td>≈ 900 м³ — 2 дровяных/пеллетных котла (котельная у северной стены)</td></tr>
+</table>
+
+<h2>2. План полного дома (очереди 1 + 2)</h2>
+
+<figure>
+<svg viewBox="0 0 880 660" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;min-width:640px">
+  <!-- размерные линии -->
+  <g stroke="#8a9a8e" stroke-width="1" fill="none">
+    <line x1="20" y1="640" x2="820" y2="640"/><line x1="20" y1="634" x2="20" y2="646"/><line x1="820" y1="634" x2="820" y2="646"/>
+    <line x1="840" y1="20" x2="840" y2="620"/><line x1="834" y1="20" x2="846" y2="20"/><line x1="834" y1="620" x2="846" y2="620"/>
+  </g>
+  <text x="420" y="658" font-size="13" fill="#5d6b62" text-anchor="middle">20,0 м</text>
+  <text x="852" y="320" font-size="13" fill="#5d6b62" text-anchor="middle" transform="rotate(90 852 320)">15,0 м</text>
+  <text x="30" y="14" font-size="12" fill="#5d6b62">↑ север</text>
+
+  <!-- комнаты -->
+  <g stroke="#26312b" stroke-width="1.2">
+    <rect x="20" y="20" width="128" height="92"  fill="var(--tech)"/>
+    <rect x="20"  y="112" width="128" height="92" fill="var(--tech)"/>
+    <rect x="148" y="20" width="140" height="184" fill="var(--bed)"/>
+    <rect x="288" y="20" width="140" height="184" fill="var(--bed)"/>
+    <rect x="428" y="20" width="80"  height="92"  fill="var(--bath)"/>
+    <rect x="428" y="112" width="80" height="92"  fill="var(--bath)"/>
+    <rect x="508" y="20" width="152" height="184" fill="var(--bed)"/>
+    <rect x="660" y="20" width="160" height="184" fill="var(--bed)"/>
+    <rect x="20"  y="204" width="800" height="72" fill="var(--corr)"/>
+    <rect x="20"  y="276" width="280" height="280" fill="var(--kitchen)"/>
+    <rect x="20"  y="556" width="280" height="64" fill="var(--tech)"/>
+    <rect x="300" y="276" width="176" height="224" fill="var(--office)"/>
+    <rect x="300" y="500" width="176" height="120" fill="var(--corr)"/>
+    <rect x="476" y="276" width="172" height="174" fill="var(--bed)"/>
+    <rect x="648" y="276" width="172" height="174" fill="var(--bed)"/>
+    <rect x="476" y="450" width="104" height="104" fill="var(--bath)"/>
+    <rect x="476" y="554" width="104" height="66"  fill="var(--tech)"/>
+    <rect x="580" y="450" width="120" height="170" fill="var(--bed)"/>
+    <rect x="700" y="450" width="120" height="170" fill="var(--bed)"/>
+  </g>
+
+  <!-- граница очереди 1 -->
+  <line x1="288" y1="20" x2="288" y2="620" stroke="#c07f2a" stroke-width="2.5" stroke-dasharray="10 7"/>
+  <text x="296" y="612" font-size="12" fill="#c07f2a" font-weight="700">→ очередь 1 ≈ 100 м²</text>
+
+  <!-- подписи -->
+  <g font-size="12.5" fill="#26312b">
+    <g text-anchor="middle">
+      <text x="84"  y="60">1 · Котельная</text><text x="84" y="76" fill="#5d6b62">7,4 м²</text>
+      <text x="84"  y="152">2 · Склад/сушилка</text><text x="84" y="168" fill="#5d6b62">7,4 м²</text>
+      <text x="218" y="106">3 · Спальня С-1</text><text x="218" y="122" fill="#5d6b62">16,1 м²</text>
+      <text x="358" y="106">4 · Спальня С-2</text><text x="358" y="122" fill="#5d6b62">16,1 м²</text>
+      <text x="468" y="60">5 · С/у</text><text x="468" y="76" fill="#5d6b62">4,6 м²</text>
+      <text x="468" y="152">6 · С/у</text><text x="468" y="168" fill="#5d6b62">4,6 м²</text>
+      <text x="584" y="106">7 · Спальня С-3</text><text x="584" y="122" fill="#5d6b62">17,5 м²</text>
+      <text x="740" y="106">8 · Спальня С-4</text><text x="740" y="122" fill="#5d6b62">18,4 м²</text>
+      <text x="420" y="244" fill="#5d6b62">9 · Коридор — 36 м²</text>
+      <text x="160" y="404">10 · Кухня-столовая</text><text x="160" y="420" fill="#5d6b62">49 м² · на 20 чел</text>
+      <text x="160" y="592">11 · Кладовая/постирочная — 11,2 м²</text>
+      <text x="388" y="382">12 · Офис/</text><text x="388" y="398">гостевая</text><text x="388" y="414" fill="#5d6b62">24,6 м²</text>
+      <text x="388" y="552">13 · Тамбур-прихожая</text><text x="388" y="568" fill="#5d6b62">13,2 м² · главный вход ↓</text>
+      <text x="562" y="356">14 · Спальня Ю-1</text><text x="562" y="372" fill="#5d6b62">18,7 м²</text>
+      <text x="734" y="356">15 · Спальня Ю-2</text><text x="734" y="372" fill="#5d6b62">18,7 м²</text>
+      <text x="528" y="496">16 · С/у-3</text><text x="528" y="511" fill="#5d6b62">6,8 м²</text>
+      <text x="528" y="584">17 · Пост.</text><text x="528" y="598" fill="#5d6b62">4,3 м²</text>
+      <text x="640" y="530">18 · Сп. Ю-3</text><text x="640" y="546" fill="#5d6b62">12,8 м²</text>
+      <text x="760" y="530">19 · Сп. Ю-4</text><text x="760" y="546" fill="#5d6b62">12,8 м²</text>
+    </g>
+  </g>
+  <!-- главный вход -->
+  <g stroke="#3d6b45" stroke-width="2.5" fill="none">
+    <line x1="388" y1="624" x2="388" y2="612"/><path d="M382 618 L388 610 L394 618"/>
+  </g>
+</svg>
+<figcaption>
+План застройки 20 × 15 м. Пунктир — граница первой очереди (западное крыло: кухня-столовая, котельная, 2 спальни, техблок; с/у на время очереди 1 — временный узел в техблоке, постоянные с/у 5–6 достраиваются очередью 2). Вход первой очереди — через южную дверь кухни.
+</figcaption>
+<div class="legend">
+  <span class="lg-bed">Спальни (8 шт)</span><span class="lg-kit">Кухня-столовая</span><span class="lg-bath">Санузлы</span>
+  <span class="lg-tech">Технические</span><span class="lg-off">Офис/гостевая</span><span class="lg-corr">Коридор/тамбур</span>
+</div>
+</figure>
+
+<h2>3. Очереди строительства</h2>
+<figure>
+<svg viewBox="0 0 880 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;min-width:640px">
+  <g font-size="13" fill="#26312b">
+    <!-- очередь 0 -->
+    <rect x="30" y="60" width="150" height="90" fill="none" stroke="#8a9a8e" stroke-width="2" stroke-dasharray="6 5"/>
+    <rect x="40" y="72" width="60" height="36" fill="var(--corr)"/><rect x="110" y="72" width="60" height="36" fill="var(--corr)"/>
+    <text x="105" y="46" text-anchor="middle" font-weight="700">Очередь 0 · год 1</text>
+    <text x="105" y="172" text-anchor="middle" fill="#5d6b62">Бытовки 1–2 шт: команда</text>
+    <text x="105" y="190" text-anchor="middle" fill="#5d6b62">живёт, дом — фундамент</text>
+    <path d="M200 105 L240 105" stroke="#8a9a8e" stroke-width="2"/><path d="M233 99 L241 105 L233 111" fill="none" stroke="#8a9a8e" stroke-width="2"/>
+    <!-- очередь 1 -->
+    <rect x="250" y="60" width="220" height="90" fill="var(--kitchen)" stroke="#c07f2a" stroke-width="2.5"/>
+    <rect x="260" y="72" width="80" height="66" fill="var(--bed)"/><rect x="350" y="72" width="110" height="66" fill="var(--tech)"/>
+    <text x="360" y="46" text-anchor="middle" font-weight="700">Очередь 1 · годы 1–2</text>
+    <text x="360" y="172" text-anchor="middle" fill="#5d6b62">Крыло ≈ 100 м²: кухня, котельная,</text>
+    <text x="360" y="190" text-anchor="middle" fill="#5d6b62">2 спальни, техблок · 6–8 чел</text>
+    <path d="M480 105 L520 105" stroke="#8a9a8e" stroke-width="2"/><path d="M513 99 L521 105 L513 111" fill="none" stroke="#8a9a8e" stroke-width="2"/>
+    <!-- очередь 2 -->
+    <rect x="530" y="60" width="320" height="90" fill="var(--bed)" stroke="#26312b" stroke-width="2"/>
+    <rect x="540" y="72" width="90" height="66" fill="var(--kitchen)"/><rect x="640" y="72" width="90" height="66" fill="var(--bath)"/><rect x="740" y="72" width="100" height="66" fill="var(--office)"/>
+    <text x="690" y="46" text-anchor="middle" font-weight="700">Очередь 2 · годы 3–6</text>
+    <text x="690" y="172" text-anchor="middle" fill="#5d6b62">Полный дом 300 м²: 8 спален, 4 с/у,</text>
+    <text x="690" y="190" text-anchor="middle" fill="#5d6b62">офис; горизонт агротуризма — год 5–6</text>
+  </g>
+</svg>
+<figcaption>Рост дома соответствует росту команды (раздел 12.1 плана) и правилу CAPEX-шлюза: новое крыло — только когда предыдущее работает и подушка цела.</figcaption>
+</figure>
+
+<h2>4. Фасады (эскиз)</h2>
+<div class="grid2">
+<figure>
+<svg viewBox="0 0 880 330" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;min-width:480px">
+  <!-- южный фасад 20 м -->
+  <rect x="40" y="282" width="800" height="18" fill="#d8d4c4"/>
+  <rect x="40" y="162" width="800" height="120" fill="#f5efe2" stroke="#26312b" stroke-width="2"/>
+  <!-- доски фасада -->
+  <g stroke="#e4dcc8" stroke-width="1">
+    <line x1="40" y1="192" x2="840" y2="192"/><line x1="40" y1="222" x2="840" y2="222"/><line x1="40" y1="252" x2="840" y2="252"/>
+  </g>
+  <!-- свес кровли -->
+  <rect x="24" y="136" width="832" height="26" fill="#4a4238"/>
+  <text x="440" y="128" font-size="13" fill="#5d6b62" text-anchor="middle">двускатная кровля (металл/фальц), конёк ≈ 6,5 м — линия свеса</text>
+  <!-- окна кухня -->
+  <g fill="#cfe3ee" stroke="#26312b" stroke-width="1.5">
+    <rect x="70" y="196" width="90" height="60"/><rect x="185" y="196" width="90" height="60"/>
+    <rect x="296" y="196" width="72" height="60"/>
+    <rect x="510" y="196" width="70" height="60"/><rect x="620" y="196" width="70" height="60"/>
+    <rect x="720" y="196" width="70" height="60"/>
+  </g>
+  <!-- крыльцо и дверь -->
+  <rect x="360" y="188" width="85" height="10" fill="#4a4238"/>
+  <rect x="376" y="200" width="50" height="82" fill="#a9803f" stroke="#26312b" stroke-width="1.5"/>
+  <rect x="356" y="290" width="90" height="8" fill="#c2bda9"/>
+  <text x="440" y="322" font-size="13" fill="#5d6b62" text-anchor="middle">Южный фасад — 20,0 м: кухня (слева), вход-тамбур с крыльцом (центр), спальни Ю-1…Ю-4</text>
+</svg>
+<figcaption>Южный фасад: главный вход с крыльцом, окна кухни-столовой и южных спален. Террасу-навес вдоль фасада можно добавить очередью 3 — она пригодится агротуризму.</figcaption>
+</figure>
+<figure>
+<svg viewBox="0 0 660 330" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;min-width:400px">
+  <!-- торцевой фасад 15 м с фронтоном -->
+  <rect x="90" y="282" width="480" height="18" fill="#d8d4c4"/>
+  <rect x="90" y="162" width="480" height="120" fill="#f5efe2" stroke="#26312b" stroke-width="2"/>
+  <path d="M60 170 L330 6 L600 170 Z" fill="#4a4238"/>
+  <path d="M74 162 L330 20 L586 162 Z" fill="#e9e2cf" stroke="#26312b" stroke-width="2"/>
+  <!-- окно чердака и спальни -->
+  <rect x="296" y="70" width="68" height="52" fill="#cfe3ee" stroke="#26312b" stroke-width="1.5"/>
+  <rect x="150" y="196" width="80" height="60" fill="#cfe3ee" stroke="#26312b" stroke-width="1.5"/>
+  <rect x="430" y="196" width="80" height="60" fill="#cfe3ee" stroke="#26312b" stroke-width="1.5"/>
+  <!-- размер конька -->
+  <g stroke="#8a9a8e" stroke-width="1" fill="none">
+    <line x1="620" y1="20" x2="620" y2="282"/><line x1="614" y1="20" x2="626" y2="20"/><line x1="614" y1="282" x2="626" y2="282"/>
+  </g>
+  <text x="632" y="156" font-size="12.5" fill="#5d6b62">≈ 6,5 м</text>
+  <text x="330" y="322" font-size="13" fill="#5d6b62" text-anchor="middle">Торцевой фасад — 15,0 м: фронтон, окно чердака; стена 3,0 м + цоколь 0,5 м</text>
+</svg>
+<figcaption>Холодный чердак под кровлей (~150 м² в плане) — сушка белья/трав, склад. Окно чердака в торце.</figcaption>
+</figure>
+</div>
+
+<h2>5. Экспликация помещений (полный дом)</h2>
+<table>
+  <tr><th>№</th><th>Помещение</th><th>Площадь</th><th>Комментарий</th></tr>
+  <tr><td>1</td><td>Котельная</td><td>7,4 м²</td><td>2 котла (дрова/пеллеты + резерв), бойлер</td></tr>
+  <tr><td>2</td><td>Склад/сушилка</td><td>7,4 м²</td><td>рабочая одежда, инвентарь</td></tr>
+  <tr><td>3–4</td><td>Спальни С-1, С-2</td><td>по 16,1 м²</td><td>1-я очередь; 2 места в каждой</td></tr>
+  <tr><td>5–6</td><td>Санузлы</td><td>по 4,6 м²</td><td>душ + туалет каждый</td></tr>
+  <tr><td>7–8</td><td>Спальни С-3, С-4</td><td>17,5 / 18,4 м²</td><td>очередь 2</td></tr>
+  <tr><td>9</td><td>Коридор</td><td>36 м²</td><td>сквозной «хребет» дома, окна в торцах</td></tr>
+  <tr><td>10</td><td>Кухня-столовая</td><td>49 м²</td><td>столы на 20 чел, планёрки, окна на юг и запад</td></tr>
+  <tr><td>11</td><td>Кладовая/постирочная</td><td>11,2 м²</td><td>стиральные машины, сушка, запасы</td></tr>
+  <tr><td>12</td><td>Офис/гостевая</td><td>24,6 м²</td><td>стол владельца, документы; гостевые ночёвки</td></tr>
+  <tr><td>13</td><td>Тамбур-прихожая</td><td>13,2 м²</td><td>главный вход, тепловой шлюз</td></tr>
+  <tr><td>14–15</td><td>Спальни Ю-1, Ю-2</td><td>по 18,7 м²</td><td>очередь 2, окна на юг</td></tr>
+  <tr><td>16</td><td>Санузел-3 (ванная)</td><td>6,8 м²</td><td>душ + ванна</td></tr>
+  <tr><td>17</td><td>Постирочная (местная)</td><td>4,3 м²</td><td>дубль стирки у восточных спален</td></tr>
+  <tr><td>18–19</td><td>Спальни Ю-3, Ю-4</td><td>по 12,8 м²</td><td>очередь 2 (можно соединить в одну 25,5 м²)</td></tr>
+  <tr><td>—</td><td>Холодный чердак</td><td>≈ 150 м²</td><td>сушка трав/белья, склад — актив для переработки</td></tr>
+</table>
+
+<h2>6. Что дальше</h2>
+<ol>
+  <li>Владелец смотрит эскиз и вносит правки (комментариями на GitHub или списком — поменяю схемы).</li>
+  <li>После объезда территории (LAND-STEP-1, решение Р1) — привязка к участку: ориентация по сторонам света, ветрам, въезду.</li>
+  <li>Рабочий проект первой очереди у конструктора (40–80 тыс ₽): конструктив, смета материалов, узлы — заказывать под сезон стройки (апрель–май).</li>
+  <li>Фундамент: сваи или мелкозаглублённая лента — решение конструктора после геологии пятна (дешевле сразу под весь дом 20×15, достраивать очередями стены).</li>
+</ol>
+<p class="back"><a href="plan.html">← Вернуться к плану развития</a></p>
+</main>
+</body>
+</html>
