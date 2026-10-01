@@ -1,0 +1,44 @@
+name: Deploy to fermaruna.ru (SpaceWeb)
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build (canonical https://fermaruna.ru)
+        run: SITE_BASE_URL=https://fermaruna.ru python3 scripts/build.py
+
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H ${{ secrets.DEPLOY_HOST }} >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Rsync to hosting (additive, config.php untouched)
+        run: |
+          rsync -av \
+            --exclude='.git' \
+            --exclude='config.php' \
+            ./ ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:fermaruna_ru/public_html/
+
+      - name: Verify live URLs
+        run: |
+          fail=0
+          for p in "" "articles/" "plan.html" "staffhouse.html"; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" "https://fermaruna.ru/$p")
+            echo "https://fermaruna.ru/$p -> $code"
+            [ "$code" = "200" ] || fail=1
+          done
+          articles=$(curl -s https://fermaruna.ru/articles/ | grep -o 'articles/[a-z0-9-]*/' | sort -u | wc -l)
+          echo "статей в журнале: $articles"
+          [ "$fail" = "0" ] || exit 1
