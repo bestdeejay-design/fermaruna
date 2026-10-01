@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Farm question (visits, products, orders)
+    url: http://fermaruna.ru
+    about: Please use the contacts published on the live farm site.
+  - name: Security report
+    url: https://github.com/bestdeejay-design/fermaruna/security/advisories/new
+    about: Report vulnerabilities privately instead of opening a public issue.

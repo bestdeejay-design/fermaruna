@@ -1,0 +1,41 @@
+name: Bug report
+description: Report a problem with the farm website
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. For security matters, follow `SECURITY.md` instead.
+  - type: input
+    id: page
+    attributes:
+      label: Affected page or file
+      description: Page URL (e.g. /news/) or repo path (e.g. content/news.json)
+      placeholder: "e.g. http://fermaruna.ru/news/ or content/news.json"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you see vs. what did you expect?
+      placeholder: "Describe the problem"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we see the problem?
+      placeholder: "1. Open ... 2. Click ... 3. See ..."
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: Browser/OS or Python version used for the build
+      placeholder: "e.g. Chrome 126 on macOS, Python 3.11"
+    validations:
+      required: false
