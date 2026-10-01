@@ -8,6 +8,8 @@
 
 Сайт: [http://fermaruna.ru](http://fermaruna.ru) · Зеркало GitHub Pages: [https://bestdeejay-design.github.io/fermaruna/](https://bestdeejay-design.github.io/fermaruna/)
 
+📖 План развития хозяйства: [docs/PLAN.md](docs/PLAN.md) — от идеи до самофинансируемой фермы.
+
 Язык сайта: русский.
 
 ## Что это
@@ -36,6 +38,7 @@ assets/         css/, js/, img/, fonts/, header.svg, footer.svg
 about/ news/ articles/ privacy/   сгенерированные страницы (результат, закоммичен)
 index.html 404.html robots.txt sitemap.xml  сгенерированные файлы (результат, закоммичен)
 .htaccess send.php config.example.php manifest.webmanifest favicon.svg
+docs/           рукописные документы проекта (план развития хозяйства)
 ```
 
 Источники правды: [`content/site.json`](content/site.json) (название, контакты, адрес, ссылка на карту), `content/news.json`, `content/faq.json`, JSON-файлы статей. Шаблоны в [`templates/`](templates/) используют `{{токены}}` из функции `render_tokens()`.

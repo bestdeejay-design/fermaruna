@@ -8,6 +8,8 @@ Static site of the organic farm Runskaya in the upper Volga, Tver region. Potato
 
 Live site: [http://fermaruna.ru](http://fermaruna.ru) · GitHub Pages mirror: [https://bestdeejay-design.github.io/fermaruna/](https://bestdeejay-design.github.io/fermaruna/)
 
+📖 Farm development plan: [docs/PLAN.md](docs/PLAN.md) — from idea to a self-funded farm (in Russian).
+
 Site language: Russian. This README is in English for contributors.
 
 ## What it is
@@ -36,6 +38,7 @@ assets/         css/, js/, img/, fonts/, header.svg, footer.svg
 about/ news/ articles/ privacy/   generated pages (output, committed)
 index.html 404.html robots.txt sitemap.xml  generated files (output, committed)
 .htaccess send.php config.example.php manifest.webmanifest favicon.svg
+docs/           hand-written project docs (farm development plan)
 ```
 
 Sources of truth: [`content/site.json`](content/site.json) (name, contacts, address, map link), `content/news.json`, `content/faq.json`, article JSON files. Templates in [`templates/`](templates/) use `{{tokens}}` listed in `render_tokens()`.
