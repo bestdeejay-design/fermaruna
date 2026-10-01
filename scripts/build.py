@@ -479,6 +479,63 @@ def breadcrumb_jsonld(items: list[tuple[str, str]]) -> dict:
     }
 
 
+HERO_ROTATE = [
+    ("hero", "Ряды картофеля на поле у леса и реки в утреннем тумане", "64% 55%"),
+    ("landscape", "Тихая река среди елей и берёз в тумане ранним осенним утром", "50% 50%"),
+    ("apiary", "Деревянные ульи на цветущем лугу у леса", "50% 50%"),
+    ("hens", "Куры и индюк на выгуле у деревянного сарая", "50% 55%"),
+    ("geese", "Белые гуси и индюк на траве у деревянной изгороди", "50% 50%"),
+    ("potatoes", "Деревянный ящик с белым и красным картофелем на земле", "50% 55%"),
+]
+
+
+def hero_candidates(root: str) -> list[dict]:
+    cands = []
+    for name, alt, pos in HERO_ROTATE:
+        if name not in IMAGES:
+            continue
+        widths = sorted(IMAGES[name])
+        big = widths[-1]
+        cands.append({
+            "s": name, "a": alt, "p": pos, "x": big, "y": IMAGES[name][big],
+            "g": ", ".join(f"{root}assets/img/{name}-{w}.webp {w}w" for w in widths),
+            "b": f"{root}assets/img/{name}-{big}.webp",
+        })
+    return cands
+
+
+def hero_pick_script(root: str) -> str:
+    """Случайный кадр hero: пик в <head>, кадр запоминается в sessionStorage, чтобы не повторяться подряд."""
+    cands = hero_candidates(root)
+    if len(cands) < 2:
+        return ""
+    return (
+        "<script>(function(){var C=" + json.dumps(cands, ensure_ascii=False, separators=(",", ":"))
+        + ";var L=null;try{L=sessionStorage.getItem('heroPick')}catch(e){}"
+        + "var P=C.filter(function(c){return c.s!==L}),A=P.length?P:C,p=A[Math.floor(Math.random()*A.length)];"
+        + "try{sessionStorage.setItem('heroPick',p.s)}catch(e){}window.__heroPick=p})();</script>"
+    )
+
+
+def hero_home_img(root: str, alt: str) -> str:
+    """Hero главной: лёгкая статичная заглушка (для preload-сканера и no-JS) + мгновенная подмена выбранного кадра."""
+    cands = hero_candidates(root)
+    if len(cands) < 2:
+        return img(root, "hero", alt, "100vw", "hero__img", eager=True)
+    small = min(IMAGES["hero"])
+    img_tag = (
+        f'<img src="{root}assets/img/hero-{small}.webp" sizes="100vw" width="{small}"'
+        f' height="{IMAGES["hero"][small]}" alt="{esc(alt)}" class="hero__img" decoding="async" fetchpriority="high">'
+    )
+    apply_script = (
+        '<script>(function(){var p=window.__heroPick;if(!p)return;'
+        'var i=document.currentScript.previousElementSibling;'
+        'if(!i||i.className.indexOf("hero__img")<0)return;'
+        'i.src=p.b;i.srcset=p.g;i.width=p.x;i.height=p.y;i.alt=p.a;i.style.objectPosition=p.p;})();</script>'
+    )
+    return img_tag + apply_script
+
+
 def layout(*, root: str, path: str, title: str, description: str, body: str,
            header: str = "solid", current: str = "", og_image: str = "assets/img/og-cover.jpg",
            og_alt: str = "", og_type: str = "website", jsonld: list | None = None,
@@ -528,9 +585,9 @@ def layout(*, root: str, path: str, title: str, description: str, body: str,
         f'<link rel="preload" href="{root}assets/fonts/manrope-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>',
     ]
     if preload_hero and "hero" in IMAGES:
-        ws = sorted(IMAGES["hero"])
-        srcset = ", ".join(f"{root}assets/img/hero-{w}.webp {w}w" for w in ws)
-        h.append(f'<link rel="preload" as="image" href="{root}assets/img/hero-{ws[-1]}.webp" imagesrcset="{srcset}" imagesizes="100vw" fetchpriority="high">')
+        pick = hero_pick_script(root)
+        if pick:
+            h.append(pick)
     h.append(f'<link rel="stylesheet" href="{root}assets/css/main.css?v={asset_v("assets/css/main.css")}">')
     h.append("<script>document.documentElement.classList.add('js')</script>")
     if jsonld:
@@ -574,6 +631,8 @@ def render_tokens(text: str, *, root: str, home: str, extra: dict | None = None)
         sizes = parts[2] if len(parts) > 2 and parts[2] else "100vw"
         cls = parts[3] if len(parts) > 3 else ""
         eager = len(parts) > 4 and parts[4] == "eager"
+        if name == "hero" and cls == "hero__img":
+            return hero_home_img(root, alt)
         return img(root, name, alt, sizes, cls, eager)
 
     text = re.sub(r"\{\{img:([^}]+)\}\}", img_token, text)
