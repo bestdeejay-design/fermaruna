@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Стафф-хаус — эскиз v2 по ТЗ владельца · Ферма «Рунская»</title>
+<title>Стафф-хаус — эскиз v3, студийная компоновка · Ферма «Рунская»</title>
 <style>
   :root {
     --ink:#26312b; --muted:#5d6b62; --paper:#faf8f2; --card:#fff;
     --line:#dfe3da; --accent:#3d6b45; --accent-soft:#eef3ec;
-    --bed:#eef3ec; --apt:#e2efe0; --kitchen:#fbf3dd; --bath:#e6eff5; --tech:#f1ede1;
-    --office:#f3ecf2; --corr:#f7f6f0; --meet:#fdf0e4;
+    --studio:#eef3ec; --apt:#e2efe0; --bath:#dcebf5; --kitchen:#fbf3dd; --tech:#f1ede1;
+    --office:#f3ecf2; --corr:#f7f6f0; --meet:#fdf0e4; --guest:#e8f0e4;
   }
   * { box-sizing: border-box; }
   body { margin:0; background:var(--paper); color:var(--ink);
     font-family:'Manrope','Segoe UI',system-ui,sans-serif; font-size:1.02rem; line-height:1.6; }
-  main { max-width:1060px; margin:0 auto; padding:2rem 1.25rem 5rem; }
+  main { max-width:1080px; margin:0 auto; padding:2rem 1.25rem 5rem; }
   h1,h2,h3 { font-family:'Alegreya',Georgia,serif; line-height:1.25; margin:1.8em 0 .5em; }
   h1 { font-size:1.9rem; margin-top:.5em; } h2 { font-size:1.45rem; border-bottom:1px solid var(--line); padding-bottom:.3em; }
   a { color:var(--accent); }
@@ -29,9 +29,9 @@
   th { background:var(--accent-soft); }
   .legend { display:flex; flex-wrap:wrap; gap:.5rem 1.1rem; font-size:.85rem; margin:.8rem 0 0; }
   .legend span::before { content:''; display:inline-block; width:.95em; height:.95em; border:1px solid var(--line); border-radius:3px; margin-right:.4em; vertical-align:-1px; }
-  .lg-bed::before{background:var(--bed);} .lg-apt::before{background:var(--apt);} .lg-kit::before{background:var(--kitchen);}
-  .lg-meet::before{background:var(--meet);} .lg-bath::before{background:var(--bath);} .lg-tech::before{background:var(--tech);}
-  .lg-off::before{background:var(--office);} .lg-corr::before{background:var(--corr);}
+  .lg-st::before{background:var(--studio);} .lg-apt::before{background:var(--apt);} .lg-bath::before{background:var(--bath);}
+  .lg-kit::before{background:var(--kitchen);} .lg-meet::before{background:var(--meet);} .lg-guest::before{background:var(--guest);}
+  .lg-tech::before{background:var(--tech);} .lg-off::before{background:var(--office);} .lg-corr::before{background:var(--corr);}
   .back { font-size:.95rem; }
   ol li, ul li { margin:.35em 0; }
 </style>
@@ -40,141 +40,163 @@
 <main>
 <p class="back"><a href="plan.html">← План развития хозяйства</a> · <a href="https://github.com/bestdeejay-design/fermaruna/blob/main/docs/PLAN.md">docs/PLAN.md, раздел 8</a></p>
 
-<h1>Стафф-хаус — эскиз v2 (по ТЗ владельца)</h1>
-<p class="lede">Переработанная концепция: каждая спальня с внутренним входом, четыре «апартамента» с дополнительным входом снаружи, отдельное рабочее крыло (офис + 2 кабинета со своим входом), большая гостиная-столовая и вторая гостиная для встреч.</p>
+<h1>Стафф-хаус — эскиз v3: студийная компоновка</h1>
+<p class="lede">Принцип — как в апарт-отелях: каждый номер — самодостаточная студия со своим санузлом и душем. Одна общая постирочная. У главного входа — два раздельных гостевых санузла. Внутренних проходов «через комнату» нет нигде.</p>
 
-<div class="note"><strong>Что изменилось по вашим правкам (v1 → v2):</strong>
+<div class="note"><strong>Что изменилось по вашему ТЗ (v2 → v3):</strong>
 <ul>
-  <li>все спальни теперь примыкают к холлу — внутренний вход у каждой;</li>
-  <li>4 южные спальни — «апартаменты»: своя прихожая с наружной дверью + внутренний выход;</li>
-  <li>офис и 2 кабинета вынесены в отдельное рабочее крыло со своим входом — визитёры и работа не проходят через жилую часть;</li>
-  <li>гостиных две: большая кухня-столовая-гостиная (40 м²) с выходом на веранду и отдельная «гостиная встреч» (20 м²) — между общей зоной и апартаментами, рядом с кухней (удобно для чая после встречи);</li>
-  <li>убрана ошибка v1: дальние спальни без связи с коридором.</li>
+  <li>все 8 номеров стали студиями: в каждой — свой санузел с душем (исправлена ошибка v2, где душевые блоки читались «вход во второй через первый»);</li>
+  <li>одна общая постирочная (16 м²: две стиральные, две сушильные, гладильная) — при входной зоне;</li>
+  <li>у главного входа — два раздельных гостевых санузла: для приезжающих, дневных гостей и рабочих не из состава команды;</li>
+  <li>сохранено из v2: 4 южных апартамента с наружным входом, рабочее крыло (офис + 2 кабинета, свой вход), большая гостиная-столовая и гостиная встреч.</li>
 </ul></div>
 
-<div class="warn"><strong>Честная цена программы.</strong> Новое ТЗ увеличило дом: отапливаемая площадь ≈ <strong>348 м²</strong> (корпус 26 × 12 + офисное крыло 6 × 6) вместо прежних 300, плюс холодная веранда 68 м². Пиломатериал бесплатный, поэтому добавка по смете ≈ +10–15% к полному дому (фундамент, кровля, окна, утепление). <strong>Первая очередь (~100 м²) не меняется</strong> и в бюджет 2–4 млн ₽ укладывается как раньше. Это эскиз, не рабочий проект: двери, окна, конструктив — за конструктором (40–80 тыс ₽).</div>
+<div class="warn"><strong>Честная цена студийности.</strong> Санузлов становится десять (8 в студиях + 2 гостевых), и дом вырастает: отапливаемая площадь ≈ <strong>425 м²</strong> (корпус 26 × 15 + офисное крыло 6 × 6) против 348 в v2. Сантехника 10 санузлов — ориентировочно 1–1,5 млн ₽ в полной смете. <strong>Первая очередь (~105 м²) почти не меняется</strong> — и в ней уже есть студия с собственным санузлом, временные узлы не нужны. Экономный гибрид (северные 4 комнаты — спальни с 2 общими с/у, южные 4 — студии) собрал бы ~370 м² и сэкономил 0,5–0,7 млн ₽ — см. открытые вопросы. Эскиз, не рабочий проект.</div>
 
 <h2>1. Габариты и объём</h2>
 <table>
   <tr><th>Параметр</th><th>Значение</th></tr>
-  <tr><td>Габарит корпуса</td><td>26,0 × 12,0 м + офисное крыло 6,0 × 6,0 м (Г-образный план)</td></tr>
-  <tr><td>Отапливаемая площадь</td><td>≈ 348 м² (корпус 312 + крыло 36)</td></tr>
-  <tr><td>Веранда</td><td>южная, ≈ 68 м² (холодная; стеклится — превращается в тёплый тамбур-холл)</td></tr>
+  <tr><td>Габарит корпуса</td><td>26,0 × 15,0 м + офисное крыло 6,0 × 6,0 м (у северо-восточного торца)</td></tr>
+  <tr><td>Отапливаемая площадь</td><td>≈ 425 м² (корпус 390 + крыло 36)</td></tr>
+  <tr><td>Веранда</td><td>южная, ≈ 68 м² (холодная; стеклится → тёплый тамбур-холл)</td></tr>
   <tr><td>Высота стен / конька</td><td>3,0 м / ≈ 6,5 м (двускатная кровля, уклон ≈ 25°)</td></tr>
-  <tr><td>Вместимость</td><td>7 спален: 4 северные (по 2 места) + 3 апартамента — 14–16 спальных мест</td></tr>
-  <tr><td>Входы</td><td>главный — через веранду в общую зону; рабочий — в офисное крыло; 4 наружных — апартаменты</td></tr>
-  <tr><td>Отопление</td><td>2 дровяных/пеллетных котла в котельной у северной стены</td></tr>
+  <tr><td>Номерной фонд</td><td>4 северные студии (по 2 места) + 4 южных апартамента (по 2 места) = 16 мест</td></tr>
+  <tr><td>Санузлы</td><td>10: 8 в студиях (душ+туалет+раковина) + 2 гостевых у входа; постирочная общая</td></tr>
+  <tr><td>Входы</td><td>главный — тамбур у юго-востока; рабочий — в офисное крыло; 4 наружных — апартаменты</td></tr>
 </table>
 
 <h2>2. План (очереди 1–3)</h2>
 
 <figure>
-<svg viewBox="0 0 840 620" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;min-width:680px">
+<svg viewBox="0 0 1030 650" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;min-width:700px">
   <!-- размерные линии -->
   <g stroke="#8a9a8e" stroke-width="1" fill="none">
-    <line x1="20" y1="592" x2="800" y2="592"/><line x1="20" y1="586" x2="20" y2="598"/><line x1="800" y1="586" x2="800" y2="598"/>
-    <line x1="818" y1="20" x2="818" y2="560"/><line x1="812" y1="20" x2="824" y2="20"/><line x1="812" y1="560" x2="824" y2="560"/>
+    <line x1="20" y1="608" x2="800" y2="608"/><line x1="20" y1="602" x2="20" y2="614"/><line x1="800" y1="602" x2="800" y2="614"/>
+    <line x1="830" y1="20" x2="830" y2="470"/><line x1="824" y1="20" x2="836" y2="20"/><line x1="824" y1="470" x2="836" y2="470"/>
   </g>
-  <text x="410" y="610" font-size="13" fill="#5d6b62" text-anchor="middle">26,0 м</text>
-  <text x="830" y="290" font-size="13" fill="#5d6b62" text-anchor="middle" transform="rotate(90 830 290)">18,0 м (корпус 12 + крыло/веранда 6)</text>
+  <text x="410" y="626" font-size="13" fill="#5d6b62" text-anchor="middle">26,0 м</text>
+  <text x="842" y="245" font-size="13" fill="#5d6b62" text-anchor="middle" transform="rotate(90 842 245)">15,0 м</text>
   <text x="26" y="14" font-size="12" fill="#5d6b62">↑ север</text>
 
-  <!-- СЕВЕРНЫЙ РЯД -->
+  <!-- ЗАПАД: общая зона -->
   <g stroke="#26312b" stroke-width="1.2">
-    <rect x="20"  y="20" width="105" height="141" fill="var(--bed)"/>
-    <rect x="125" y="20" width="105" height="141" fill="var(--bed)"/>
-    <rect x="230" y="20" width="66"  height="70"  fill="var(--bath)"/>
-    <rect x="230" y="90" width="66"  height="71"  fill="var(--bath)"/>
-    <rect x="296" y="20" width="105" height="141" fill="var(--bed)"/>
-    <rect x="401" y="20" width="105" height="141" fill="var(--bed)"/>
-    <rect x="506" y="20" width="84"  height="141" fill="var(--tech)"/>
-    <rect x="590" y="20" width="78"  height="141" fill="var(--tech)"/>
-    <rect x="668" y="20" width="66"  height="70"  fill="var(--bath)"/>
-    <rect x="668" y="90" width="66"  height="71"  fill="var(--tech)"/>
-    <rect x="734" y="20" width="66"  height="70"  fill="var(--bath)"/>
-    <rect x="734" y="90" width="66"  height="71"  fill="var(--bath)"/>
-    <!-- ХОЛЛ -->
-    <rect x="20" y="161" width="780" height="51" fill="var(--corr)"/>
-    <!-- ЮЖНЫЙ РЯД -->
-    <rect x="20"  y="212" width="216" height="168" fill="var(--kitchen)"/>
-    <rect x="236" y="212" width="108" height="168" fill="var(--meet)"/>
-    <rect x="344" y="212" width="102" height="132" fill="var(--apt)"/>
-    <rect x="344" y="344" width="102" height="36"  fill="var(--corr)"/>
-    <rect x="446" y="212" width="102" height="132" fill="var(--apt)"/>
-    <rect x="446" y="344" width="102" height="36"  fill="var(--corr)"/>
-    <rect x="548" y="212" width="102" height="132" fill="var(--apt)"/>
-    <rect x="548" y="344" width="102" height="36"  fill="var(--corr)"/>
-    <rect x="650" y="212" width="102" height="132" fill="var(--apt)"/>
-    <rect x="650" y="344" width="102" height="36"  fill="var(--corr)"/>
-    <rect x="752" y="212" width="48"  height="84"  fill="var(--bath)"/>
-    <rect x="752" y="296" width="48"  height="84"  fill="var(--tech)"/>
+    <rect x="20"  y="20"  width="210" height="96"  fill="var(--meet)"/>
+    <rect x="20"  y="116" width="105" height="99"  fill="var(--tech)"/>
+    <rect x="125" y="116" width="105" height="99"  fill="var(--tech)"/>
+    <rect x="20"  y="215" width="210" height="255" fill="var(--kitchen)"/>
+  </g>
+
+  <!-- СЕВЕРНЫЕ СТУДИИ -->
+  <g stroke="#26312b" stroke-width="1.2">
+    <rect x="230" y="20" width="112" height="126" fill="var(--studio)"/>
+    <rect x="230" y="146" width="112" height="54"  fill="var(--bath)"/>
+    <rect x="342" y="20" width="112" height="126" fill="var(--studio)"/>
+    <rect x="342" y="146" width="112" height="54"  fill="var(--bath)"/>
+    <rect x="454" y="20" width="112" height="126" fill="var(--studio)"/>
+    <rect x="454" y="146" width="112" height="54"  fill="var(--bath)"/>
+    <rect x="566" y="20" width="112" height="126" fill="var(--studio)"/>
+    <rect x="566" y="146" width="112" height="54"  fill="var(--bath)"/>
+  </g>
+
+  <!-- ХОЛЛ -->
+  <rect x="230" y="200" width="570" height="54" fill="var(--corr)" stroke="#26312b" stroke-width="1.2"/>
+
+  <!-- ВОСТОК: входной узел -->
+  <g stroke="#26312b" stroke-width="1.2">
+    <rect x="680" y="20"  width="120" height="132" fill="var(--tech)"/>
+    <rect x="680" y="152" width="120" height="120" fill="var(--tech)"/>
+    <rect x="680" y="272" width="60"  height="78"  fill="var(--guest)"/>
+    <rect x="740" y="272" width="60"  height="78"  fill="var(--guest)"/>
+    <rect x="680" y="350" width="120" height="120" fill="var(--corr)"/>
+  </g>
+
+  <!-- ЮЖНЫЕ АПАРТАМЕНТЫ -->
+  <g stroke="#26312b" stroke-width="1.2">
+    <rect x="230" y="254" width="112" height="126" fill="var(--apt)"/>
+    <rect x="230" y="380" width="112" height="48"  fill="var(--bath)"/>
+    <rect x="230" y="428" width="112" height="42"  fill="var(--corr)"/>
+    <rect x="342" y="254" width="112" height="126" fill="var(--apt)"/>
+    <rect x="342" y="380" width="112" height="48"  fill="var(--bath)"/>
+    <rect x="342" y="428" width="112" height="42"  fill="var(--corr)"/>
+    <rect x="454" y="254" width="112" height="126" fill="var(--apt)"/>
+    <rect x="454" y="380" width="112" height="48"  fill="var(--bath)"/>
+    <rect x="454" y="428" width="112" height="42"  fill="var(--corr)"/>
+    <rect x="566" y="254" width="112" height="126" fill="var(--apt)"/>
+    <rect x="566" y="380" width="112" height="48"  fill="var(--bath)"/>
+    <rect x="566" y="428" width="112" height="42"  fill="var(--corr)"/>
   </g>
 
   <!-- ОФИСНОЕ КРЫЛО -->
   <g stroke="#26312b" stroke-width="1.2">
-    <rect x="20"  y="380" width="180" height="90" fill="var(--office)"/>
-    <rect x="20"  y="470" width="90"  height="90" fill="var(--office)"/>
-    <rect x="110" y="470" width="90"  height="90" fill="var(--office)"/>
+    <rect x="820" y="20"  width="160" height="90"  fill="var(--office)"/>
+    <rect x="820" y="110" width="80"  height="90"  fill="var(--office)"/>
+    <rect x="900" y="110" width="80"  height="90"  fill="var(--office)"/>
   </g>
-  <!-- связь крыла с домом: проём в стене y=380 -->
-  <rect x="90" y="376" width="40" height="8" fill="var(--paper)" stroke="none"/>
 
   <!-- ВЕРАНДА -->
-  <rect x="236" y="380" width="564" height="108" fill="none" stroke="#8a9a8e" stroke-width="1.6" stroke-dasharray="7 6"/>
-  <text x="518" y="428" font-size="13" fill="#5d6b62" text-anchor="middle">Веранда (холодная) ≈ 68 м²</text>
-  <text x="518" y="446" font-size="12" fill="#5d6b62" text-anchor="middle">наружные входы апартаментов · летняя «вторая гостиная» · стеклится → тёплый тамбур</text>
+  <rect x="230" y="480" width="570" height="108" fill="none" stroke="#8a9a8e" stroke-width="1.6" stroke-dasharray="7 6"/>
+  <text x="515" y="528" font-size="13" fill="#5d6b62" text-anchor="middle">Веранда (холодная) ≈ 68 м²</text>
+  <text x="515" y="546" font-size="12" fill="#5d6b62" text-anchor="middle">наружные входы апартаментов и тамбура · летняя «вторая гостиная» · стеклится → тёплый тамбур</text>
 
   <!-- граница очереди 1 -->
-  <line x1="230" y1="20" x2="230" y2="161" stroke="#c07f2a" stroke-width="2.5" stroke-dasharray="10 7"/>
-  <line x1="236" y1="212" x2="236" y2="380" stroke="#c07f2a" stroke-width="2.5" stroke-dasharray="10 7"/>
-  <text x="244" y="366" font-size="12" fill="#c07f2a" font-weight="700">→ очередь 1 ≈ 100 м²</text>
-  <text x="244" y="382" font-size="11" fill="#c07f2a">очередь 2 — остальные спальни · очередь 3 — офисное крыло</text>
+  <line x1="210" y1="20" x2="210" y2="470" stroke="#c07f2a" stroke-width="2.5" stroke-dasharray="10 7"/>
+  <text x="16" y="496" font-size="12" fill="#c07f2a" font-weight="700">→ очередь 1 ≈ 105 м² (общая зона + котельная + студия С-1) · очередь 2 — студии и апартаменты · очередь 3 — офисное крыло</text>
 
   <!-- подписи -->
   <g font-size="12" fill="#26312b" text-anchor="middle">
-    <text x="72"  y="84">С-1</text><text x="72" y="99" fill="#5d6b62">16,5 м²</text>
-    <text x="177" y="84">С-2</text><text x="177" y="99" fill="#5d6b62">16,5 м²</text>
-    <text x="263" y="50">с/у-1</text><text x="263" y="64" fill="#5d6b62">5,2</text>
-    <text x="263" y="120">ванная</text><text x="263" y="134" fill="#5d6b62">5,2</text>
-    <text x="348" y="84">С-3</text><text x="348" y="99" fill="#5d6b62">16,5 м²</text>
-    <text x="453" y="84">С-4</text><text x="453" y="99" fill="#5d6b62">16,5 м²</text>
-    <text x="548" y="84">Котельная</text><text x="548" y="99" fill="#5d6b62">13,2 м²</text>
-    <text x="629" y="84">Склад/</text><text x="629" y="99">сушилка</text><text x="629" y="113" fill="#5d6b62">12,2 м²</text>
-    <text x="701" y="50">с/у-2</text><text x="701" y="64" fill="#5d6b62">5,2</text>
-    <text x="701" y="120">Постир.</text><text x="701" y="134" fill="#5d6b62">5,2</text>
-    <text x="767" y="50">с/у-3</text><text x="767" y="64" fill="#5d6b62">5,2</text>
-    <text x="767" y="120">с/у-4</text><text x="767" y="134" fill="#5d6b62">5,2</text>
-    <text x="410" y="190" fill="#5d6b62">Холл — 44 м² (внутренние входы всех спален)</text>
-    <text x="128" y="290">Кухня-столовая-</text><text x="128" y="306">гостиная (большая)</text><text x="128" y="322" fill="#5d6b62">≈ 40 м² + выход на веранду</text>
-    <text x="290" y="290">Гостиная</text><text x="290" y="306">встреч</text><text x="290" y="322" fill="#5d6b62">20 м²</text>
-    <text x="395" y="268">Апарт. Ю-1</text><text x="395" y="283" fill="#5d6b62">15 м²</text><text x="395" y="298" font-size="10.5" fill="#5d6b62">+ прихожая 4,4</text>
-    <text x="497" y="268">Апарт. Ю-2</text><text x="497" y="283" fill="#5d6b62">15 м²</text><text x="497" y="298" font-size="10.5" fill="#5d6b62">+ прихожая 4,4</text>
-    <text x="599" y="268">Апарт. Ю-3</text><text x="599" y="283" fill="#5d6b62">15 м²</text><text x="599" y="298" font-size="10.5" fill="#5d6b62">+ прихожая 4,4</text>
-    <text x="701" y="268">Апарт. Ю-4</text><text x="701" y="283" fill="#5d6b62">15 м²</text><text x="701" y="298" font-size="10.5" fill="#5d6b62">+ прихожая 4,4</text>
-    <text x="776" y="248" font-size="11">с/у-5</text>
-    <text x="776" y="332" font-size="11">постир.</text>
-    <text x="110" y="420">Офис — 18 м²</text><text x="110" y="436" fill="#5d6b62">свой вход с запада</text>
-    <text x="65"  y="510">Кабинет-1</text><text x="65" y="525" fill="#5d6b62">9 м²</text>
-    <text x="155" y="510">Кабинет-2</text><text x="155" y="525" fill="#5d6b62">9 м²</text>
+    <text x="125" y="62">Гостиная встреч</text><text x="125" y="78" fill="#5d6b62">22,4 м²</text>
+    <text x="72"  y="160">Котельная</text><text x="72" y="175" fill="#5d6b62">11,6 м²</text>
+    <text x="177" y="160">Склад/</text><text x="177" y="175">сушилка</text><text x="177" y="190" fill="#5d6b62">11,6 м²</text>
+    <text x="125" y="330">Кухня-столовая-гостиная</text><text x="125" y="346" fill="#5d6b62">59,5 м² · выход на веранду</text>
+    <text x="286" y="80">Студия С-1</text><text x="286" y="95" fill="#5d6b62">15,8 м²</text>
+    <text x="286" y="176" font-size="11">с/у · душ</text>
+    <text x="398" y="80">Студия С-2</text><text x="398" y="95" fill="#5d6b62">15,8 м²</text>
+    <text x="398" y="176" font-size="11">с/у · душ</text>
+    <text x="510" y="80">Студия С-3</text><text x="510" y="95" fill="#5d6b62">15,8 м²</text>
+    <text x="510" y="176" font-size="11">с/у · душ</text>
+    <text x="622" y="80">Студия С-4</text><text x="622" y="95" fill="#5d6b62">15,8 м²</text>
+    <text x="622" y="176" font-size="11">с/у · душ</text>
+    <text x="515" y="230" fill="#5d6b62">Холл — 34 м² · гостевые с/у и постирочная — в торце →</text>
+    <text x="740" y="80">Сушка/</text><text x="740" y="95">кладовая</text><text x="740" y="110" fill="#5d6b62">17,6 м²</text>
+    <text x="740" y="206">Постирочная</text><text x="740" y="221" fill="#5d6b62">16 м²</text>
+    <text x="710" y="306" font-size="11">гост. с/у</text>
+    <text x="770" y="306" font-size="11">гост. с/у</text>
+    <text x="740" y="404">Тамбур 16 м²</text><text x="740" y="419" fill="#5d6b62">главный вход</text>
+    <text x="286" y="310">Апартамент А-1</text><text x="286" y="325" fill="#5d6b62">15 м²</text>
+    <text x="286" y="406" font-size="11">с/у · душ 6,8</text>
+    <text x="286" y="452" font-size="11">прихожая 6</text>
+    <text x="398" y="310">Апартамент А-2</text><text x="398" y="325" fill="#5d6b62">15 м²</text>
+    <text x="398" y="406" font-size="11">с/у · душ 6,8</text>
+    <text x="398" y="452" font-size="11">прихожая 6</text>
+    <text x="510" y="310">Апартамент А-3</text><text x="510" y="325" fill="#5d6b62">15 м²</text>
+    <text x="510" y="406" font-size="11">с/у · душ 6,8</text>
+    <text x="510" y="452" font-size="11">прихожая 6</text>
+    <text x="622" y="310">Апартамент А-4</text><text x="622" y="325" fill="#5d6b62">15 м²</text>
+    <text x="622" y="406" font-size="11">с/у · душ 6,8</text>
+    <text x="622" y="452" font-size="11">прихожая 6</text>
+    <text x="900" y="60">Офис — 18 м²</text>
+    <text x="860" y="150" font-size="11.5">Кабинет-1</text><text x="860" y="165" font-size="11.5" fill="#5d6b62">9 м²</text>
+    <text x="940" y="150" font-size="11.5">Кабинет-2</text><text x="940" y="165" font-size="11.5" fill="#5d6b62">9 м²</text>
   </g>
 
-  <!-- наружные двери: апартаменты + офис + главный вход -->
+  <!-- наружные двери -->
   <g stroke="#3d6b45" stroke-width="2.5" fill="none">
-    <path d="M395 490 L395 482 M389 486 L395 479 L401 486"/>
-    <path d="M497 490 L497 482 M491 486 L497 479 L503 486"/>
-    <path d="M599 490 L599 482 M593 486 L599 479 L605 486"/>
-    <path d="M701 490 L701 482 M695 486 L701 479 L707 486"/>
-    <path d="M10 425 L18 425 M14 419 L21 425 L14 431"/>
-    <path d="M128 376 L128 368 M122 372 L128 365 L134 372"/>
+    <path d="M286 598 L286 590 M280 594 L286 587 L292 594"/>
+    <path d="M398 598 L398 590 M392 594 L398 587 L404 594"/>
+    <path d="M510 598 L510 590 M504 594 L510 587 L516 594"/>
+    <path d="M622 598 L622 590 M616 594 L622 587 L628 594"/>
+    <path d="M740 598 L740 590 M734 594 L740 583 L746 594"/>
+    <path d="M990 60 L998 60 M994 54 L1001 60 L994 66"/>
+    <path d="M125 462 L125 454 M119 458 L125 451 L131 458"/>
   </g>
 </svg>
 <figcaption>
-Масштаб ≈ 30 px/м. Зелёные стрелки — наружные двери: главный вход в общую зону через веранду, рабочий вход в офис, 4 входа апартаментов. Пунктир (оранжевый) — граница первой очереди: кухня-гостиная, спальни С-1/С-2 ≈ 100 м² (санузел на время очереди — временный узел) — в тепле к концу года 2; гостиная встреч, апартаменты и остальные спальни — очередь 2.
+Масштаб ≈ 30 px/м. Зелёные стрелки — наружные двери: главный вход (тамбур, юго-восток), рабочий вход (офисное крыло, восток), выход общей зоны на веранду, 4 входа апартаментов. Пунктир (оранжевый) — очередь 1 ≈ 105 м²: вся общая зона, котельная и студия С-1 со своим санузлом — в тепле к концу года 2.
 </figcaption>
 <div class="legend">
-  <span class="lg-bed">Спальни</span><span class="lg-apt">Апартаменты (наружный вход)</span><span class="lg-kit">Кухня-столовая-гостиная</span>
-  <span class="lg-meet">Гостиная встреч</span><span class="lg-bath">Санузлы/ванная</span><span class="lg-tech">Технические</span>
-  <span class="lg-off">Рабочее крыло</span><span class="lg-corr">Холл/прихожие</span>
+  <span class="lg-st">Студии (с/у внутри)</span><span class="lg-apt">Апартаменты (с/у + наружный вход)</span><span class="lg-bath">Санузлы/ванная</span>
+  <span class="lg-kit">Кухня-столовая-гостиная</span><span class="lg-meet">Гостиная встреч</span><span class="lg-guest">Гостевые с/у</span>
+  <span class="lg-tech">Технические</span><span class="lg-off">Рабочее крыло</span><span class="lg-corr">Холл/прихожие/тамбур</span>
 </div>
 </figure>
 
@@ -186,124 +208,120 @@
     <rect x="40" y="78" width="52" height="32" fill="var(--corr)"/><rect x="102" y="78" width="52" height="32" fill="var(--corr)"/>
     <text x="95" y="52" text-anchor="middle" font-weight="700">Очередь 0 · год 1</text>
     <text x="95" y="172" text-anchor="middle" fill="#5d6b62">Бытовки: команда живёт,</text>
-    <text x="95" y="190" text-anchor="middle" fill="#5d6b62">фундамент и каркас крыла 1</text>
+    <text x="95" y="190" text-anchor="middle" fill="#5d6b62">фундамент и каркас очереди 1</text>
     <path d="M172 108 L206 108" stroke="#8a9a8e" stroke-width="2"/><path d="M199 102 L207 108 L199 114" fill="none" stroke="#8a9a8e" stroke-width="2"/>
-    <rect x="216" y="66" width="200" height="84" fill="var(--kitchen)" stroke="#c07f2a" stroke-width="2.5"/>
-    <rect x="226" y="78" width="70" height="60" fill="var(--bed)"/><rect x="306" y="78" width="100" height="60" fill="var(--meet)"/>
-    <text x="316" y="52" text-anchor="middle" font-weight="700">Очередь 1 · годы 1–2</text>
-    <text x="316" y="172" text-anchor="middle" fill="#5d6b62">≈ 100 м²: кухня-гостиная, 2 спальни,</text>
-    <text x="316" y="190" text-anchor="middle" fill="#5d6b62">временный с/у · 5–7 чел · в тепле к зиме года 2</text>
-    <path d="M428 108 L462 108" stroke="#8a9a8e" stroke-width="2"/><path d="M455 102 L463 108 L455 114" fill="none" stroke="#8a9a8e" stroke-width="2"/>
-    <rect x="472" y="66" width="180" height="84" fill="var(--apt)" stroke="#26312b" stroke-width="2"/>
-    <rect x="482" y="78" width="76" height="60" fill="var(--bed)"/><rect x="568" y="78" width="76" height="60" fill="var(--bath)"/>
-    <text x="562" y="52" text-anchor="middle" font-weight="700">Очередь 2 · годы 3–5</text>
-    <text x="562" y="172" text-anchor="middle" fill="#5d6b62">Полный корпус: апартаменты,</text>
-    <text x="562" y="190" text-anchor="middle" fill="#5d6b62">остальные спальни и с/у · веранда</text>
-    <path d="M664 108 L698 108" stroke="#8a9a8e" stroke-width="2"/><path d="M691 102 L699 108 L691 114" fill="none" stroke="#8a9a8e" stroke-width="2"/>
-    <rect x="708" y="66" width="150" height="84" fill="var(--office)" stroke="#26312b" stroke-width="2"/>
-    <text x="783" y="52" text-anchor="middle" font-weight="700">Очередь 3 · год 5+</text>
-    <text x="783" y="172" text-anchor="middle" fill="#5d6b62">Офисное крыло:</text>
-    <text x="783" y="190" text-anchor="middle" fill="#5d6b62">офис + 2 кабинета + гостиная встреч*</text>
-    <text x="440" y="234" text-anchor="middle" fill="#8a9a8e" font-size="12">* до крыла 3 «гостиная встреч» работает в составе очереди 1 — совещания за большим столом кухни-столовой</text>
+    <rect x="216" y="66" width="210" height="84" fill="var(--kitchen)" stroke="#c07f2a" stroke-width="2.5"/>
+    <rect x="226" y="78" width="90" height="60" fill="var(--studio)"/><rect x="326" y="78" width="90" height="60" fill="var(--tech)"/>
+    <text x="321" y="52" text-anchor="middle" font-weight="700">Очередь 1 · годы 1–2</text>
+    <text x="321" y="172" text-anchor="middle" fill="#5d6b62">≈ 105 м²: кухня-гостиная, котельная,</text>
+    <text x="321" y="190" text-anchor="middle" fill="#5d6b62">гостиная встреч (врем. спальня), студия С-1 · в тепле к зиме года 2</text>
+    <path d="M438 108 L472 108" stroke="#8a9a8e" stroke-width="2"/><path d="M465 102 L473 108 L465 114" fill="none" stroke="#8a9a8e" stroke-width="2"/>
+    <rect x="482" y="66" width="200" height="84" fill="var(--apt)" stroke="#26312b" stroke-width="2"/>
+    <rect x="492" y="78" width="86" height="60" fill="var(--studio)"/><rect x="588" y="78" width="86" height="60" fill="var(--bath)"/>
+    <text x="582" y="52" text-anchor="middle" font-weight="700">Очередь 2 · годы 3–5</text>
+    <text x="582" y="172" text-anchor="middle" fill="#5d6b62">Полный корпус: студии С-2…С-4,</text>
+    <text x="582" y="190" text-anchor="middle" fill="#5d6b62">апартаменты А-1…А-4, гостевая зона, веранда</text>
+    <path d="M694 108 L728 108" stroke="#8a9a8e" stroke-width="2"/><path d="M721 102 L729 108 L721 114" fill="none" stroke="#8a9a8e" stroke-width="2"/>
+    <rect x="738" y="66" width="120" height="84" fill="var(--office)" stroke="#26312b" stroke-width="2"/>
+    <text x="798" y="52" text-anchor="middle" font-weight="700">Очередь 3 · год 5+</text>
+    <text x="798" y="172" text-anchor="middle" fill="#5d6b62">Офисное крыло:</text>
+    <text x="798" y="190" text-anchor="middle" fill="#5d6b62">офис + 2 кабинета</text>
   </g>
 </svg>
-<figcaption>Каждая очередь сама по себе полноценна для проживания. Рост — по правилу CAPEX-шлюза: следующее крыло строим, когда предыдущее работает, а подушка целa.</figcaption>
+<figcaption>Каждая очередь сама по себе полноценна для проживания. Рост — по правилу CAPEX-шлюза: следующее крыло строим, когда предыдущее работает, а подушка цела.</figcaption>
 </figure>
 
 <h2>4. Фасады (эскиз)</h2>
 <figure>
-<svg viewBox="0 0 900 350" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;min-width:480px">
+<svg viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;min-width:480px">
   <!-- южный фасад 26 м + веранда -->
-  <rect x="40" y="312" width="780" height="14" fill="#d8d4c4"/>
+  <rect x="40" y="322" width="780" height="14" fill="#d8d4c4"/>
   <!-- веранда: столбы и навес -->
   <g stroke="#8a9a8e" stroke-width="2">
-    <line x1="216" y1="180" x2="216" y2="312"/><line x1="352" y1="180" x2="352" y2="312"/>
-    <line x1="488" y1="180" x2="488" y2="312"/><line x1="624" y1="180" x2="624" y2="312"/><line x1="760" y1="180" x2="760" y2="312"/>
+    <line x1="216" y1="190" x2="216" y2="322"/><line x1="352" y1="190" x2="352" y2="322"/>
+    <line x1="488" y1="190" x2="488" y2="322"/><line x1="624" y1="190" x2="624" y2="322"/><line x1="760" y1="190" x2="760" y2="322"/>
   </g>
-  <rect x="200" y="168" width="620" height="12" fill="#8a9a8e" opacity="0.55"/>
-  <text x="510" y="160" font-size="12" fill="#5d6b62">навес веранды (холодная зона)</text>
+  <rect x="200" y="178" width="620" height="12" fill="#8a9a8e" opacity="0.55"/>
+  <text x="510" y="170" font-size="12" fill="#5d6b62">навес веранды (холодная зона)</text>
   <!-- корпус -->
-  <rect x="40" y="192" width="800" height="120" fill="#f5efe2" stroke="#26312b" stroke-width="2"/>
+  <rect x="40" y="202" width="800" height="120" fill="#f5efe2" stroke="#26312b" stroke-width="2"/>
   <g stroke="#e4dcc8" stroke-width="1">
-    <line x1="40" y1="222" x2="840" y2="222"/><line x1="40" y1="252" x2="840" y2="252"/><line x1="40" y1="282" x2="840" y2="282"/>
+    <line x1="40" y1="232" x2="840" y2="232"/><line x1="40" y1="262" x2="840" y2="262"/><line x1="40" y1="292" x2="840" y2="292"/>
   </g>
-  <rect x="24" y="166" width="196" height="26" fill="#4a4238"/>
-  <text x="120" y="158" font-size="12" fill="#5d6b62" text-anchor="middle">кровля (конёк ≈ 6,5 м)</text>
-  <!-- окна: кухня, гостиная встреч, апартаменты -->
+  <rect x="24" y="176" width="196" height="26" fill="#4a4238"/>
+  <text x="120" y="168" font-size="12" fill="#5d6b62" text-anchor="middle">кровля (конёк ≈ 6,5 м)</text>
+  <!-- окна: кухня, гостиная встреч (справа на востоке тамбур) -->
   <g fill="#cfe3ee" stroke="#26312b" stroke-width="1.5">
-    <rect x="55"  y="226" width="80" height="56"/>
-    <rect x="150" y="226" width="70" height="56"/>
-    <rect x="250" y="226" width="60" height="56"/>
-    <rect x="375" y="226" width="56" height="56"/><rect x="477" y="226" width="56" height="56"/>
-    <rect x="579" y="226" width="56" height="56"/><rect x="681" y="226" width="56" height="56"/>
+    <rect x="55"  y="236" width="80" height="56"/>
+    <rect x="150" y="236" width="60" height="56"/>
+    <rect x="255" y="236" width="60" height="56"/>
+    <rect x="380" y="236" width="56" height="56"/><rect x="492" y="236" width="56" height="56"/>
+    <rect x="604" y="236" width="56" height="56"/><rect x="716" y="236" width="40" height="56"/>
   </g>
-  <!-- двери апартаментов на веранду -->
+  <!-- двери апартаментов и тамбур на веранду -->
   <g fill="#a9803f" stroke="#26312b" stroke-width="1.5">
-    <rect x="444" y="252" width="26" height="60"/><rect x="546" y="252" width="26" height="60"/>
-    <rect x="648" y="252" width="26" height="60"/><rect x="750" y="252" width="26" height="60"/>
+    <rect x="446" y="262" width="26" height="60"/><rect x="558" y="262" width="26" height="60"/>
+    <rect x="670" y="262" width="26" height="60"/><rect x="768" y="262" width="30" height="60"/>
   </g>
-  <text x="440" y="344" font-size="13" fill="#5d6b62" text-anchor="middle">Южный фасад — 26,0 м: общая зона и гостиная встреч (слева), 4 апартамента с верандой и наружными входами</text>
+  <text x="440" y="354" font-size="13" fill="#5d6b62" text-anchor="middle">Южный фасад — 26,0 м: общая зона (слева), 4 апартамента с верандой, главный тамбур (справа)</text>
 </svg>
-<figcaption>Апартаменты смотрят на юг: свет, свои входы, веранда — при переходе к агротуризму это готовые «гостевые комнаты».</figcaption>
+<figcaption>Апартаменты смотрят на юг: свет, свои входы, веранда — при переходе к агротуризму это готовые гостевые номера.</figcaption>
 </figure>
 
 <figure>
 <svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;min-width:420px">
-  <!-- западный фасад: крыло + корпус, глубина 18 м -->
-  <rect x="90" y="304" width="500" height="14" fill="#d8d4c4"/>
-  <!-- офисное крыло (передний план, ниже) -->
-  <rect x="90" y="216" width="180" height="88" fill="#f5efe2" stroke="#26312b" stroke-width="2"/>
-  <rect x="84" y="204" width="192" height="12" fill="#4a4238"/>
-  <rect x="150" y="240" width="44" height="64" fill="#a9803f" stroke="#26312b" stroke-width="1.5"/>
-  <text x="180" y="196" font-size="12" fill="#5d6b62" text-anchor="middle">рабочее крыло · вход</text>
-  <!-- корпус с фронтоном -->
-  <path d="M290 96 L510 96 L510 204 L290 204 Z" fill="none"/>
-  <rect x="290" y="176" width="300" height="128" fill="#f5efe2" stroke="#26312b" stroke-width="2"/>
-  <path d="M276 176 L440 62 L604 176 Z" fill="#e9e2cf" stroke="#26312b" stroke-width="2"/>
-  <path d="M266 180 L440 54 L614 180 Z" fill="#4a4238"/>
-  <path d="M276 176 L440 62 L604 176 Z" fill="#e9e2cf" stroke="#26312b" stroke-width="2"/>
-  <rect x="412" y="100" width="56" height="46" fill="#cfe3ee" stroke="#26312b" stroke-width="1.5"/>
-  <rect x="330" y="212" width="72" height="56" fill="#cfe3ee" stroke="#26312b" stroke-width="1.5"/>
-  <rect x="478" y="212" width="72" height="56" fill="#cfe3ee" stroke="#26312b" stroke-width="1.5"/>
+  <!-- восточный фасад: глубина 15 м, фронтон, офисное крыло -->
+  <rect x="150" y="304" width="420" height="14" fill="#d8d4c4"/>
+  <rect x="150" y="176" width="420" height="128" fill="#f5efe2" stroke="#26312b" stroke-width="2"/>
+  <path d="M136 180 L360 66 L584 180 Z" fill="#4a4238"/>
+  <path d="M150 176 L360 74 L570 176 Z" fill="#e9e2cf" stroke="#26312b" stroke-width="2"/>
+  <rect x="332" y="100" width="56" height="46" fill="#cfe3ee" stroke="#26312b" stroke-width="1.5"/>
+  <rect x="210" y="212" width="72" height="56" fill="#cfe3ee" stroke="#26312b" stroke-width="1.5"/>
+  <rect x="440" y="212" width="72" height="56" fill="#cfe3ee" stroke="#26312b" stroke-width="1.5"/>
+  <!-- офисное крыло в перспективе торца (пунктир — за фасадом) -->
+  <rect x="570" y="216" width="90" height="88" fill="var(--office)" stroke="#26312b" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="615" y="266" font-size="11" fill="#5d6b62" text-anchor="middle">офисное</text>
+  <text x="615" y="280" font-size="11" fill="#5d6b62" text-anchor="middle">крыло</text>
   <g stroke="#8a9a8e" stroke-width="1" fill="none">
-    <line x1="630" y1="54" x2="630" y2="318"/><line x1="624" y1="54" x2="636" y2="54"/><line x1="624" y1="318" x2="636" y2="318"/>
+    <line x1="80" y1="66" x2="80" y2="318"/><line x1="74" y1="66" x2="86" y2="66"/><line x1="74" y1="318" x2="86" y2="318"/>
   </g>
-  <text x="644" y="190" font-size="12.5" fill="#5d6b62">≈ 6,5 м</text>
-  <text x="350" y="334" font-size="13" fill="#5d6b62" text-anchor="middle">Западный фасад: рабочее крыло со своим входом + торец корпуса (глубина 12 м), фронтон</text>
+  <text x="66" y="196" font-size="12.5" fill="#5d6b62" text-anchor="middle" transform="rotate(-90 66 196)">15,0 м</text>
+  <text x="380" y="334" font-size="13" fill="#5d6b62" text-anchor="middle">Восточный фасад: фронтон, тамбур и гостевая зона; офисное крыло — за торцом</text>
 </svg>
-<figcaption>Рабочее крыло ниже корпуса (2,6 м высоты крыши) — его кровля пристраивается очередью 3 без переделки основной.</figcaption>
+<figcaption>Главный вход ориентирован на юго-восток — со стороны парковки и ворот; гостевые санузлы сразу у входа.</figcaption>
 </figure>
 
 <h2>5. Экспликация помещений</h2>
 <table>
   <tr><th>Помещение</th><th>Площадь</th><th>Комментарий</th></tr>
-  <tr><td>Кухня-столовая-гостиная (большая)</td><td>≈ 40 м²</td><td>кухня у северной стены, столы на 16–20 чел, диванная зона; выход на веранду</td></tr>
-  <tr><td>Гостиная встреч</td><td>20 м²</td><td>тихая комната: совещания, переговоры, отдых с книгой; рядом с кухней</td></tr>
-  <tr><td>Спальни С-1…С-4 (север)</td><td>по 16,5 м²</td><td>внутренний вход из холла, по 2 места</td></tr>
-  <tr><td>Апартаменты Ю-1…Ю-4 (юг)</td><td>15 + прихожая 4,4</td><td>наружный вход с веранды + внутренний выход; кандидат в гостевые при агротуризме</td></tr>
-  <tr><td>Холл</td><td>44 м²</td><td>«хребет» дома, связывает все помещения</td></tr>
-  <tr><td>Санузлы ×5 + ванная + 2 постирочные</td><td>5,2 м² каждый</td><td>равномерно по концам холла и у апартаментов</td></tr>
-  <tr><td>Котельная</td><td>13,2 м²</td><td>2 котла, дровяной склад рядом снаружи</td></tr>
-  <tr><td>Склад/сушилка</td><td>12,2 м²</td><td>рабочая одежда, инвентарь</td></tr>
-  <tr><td>Офис</td><td>18 м²</td><td>стол владельца, документы, свой вход — приём людей не через дом</td></tr>
-  <tr><td>Кабинеты ×2</td><td>по 9 м²</td><td>удалённая работа, учёт, тишина</td></tr>
-  <tr><td>Веранда</td><td>≈ 68 м² (холодная)</td><td>наружные входы апартаментов, летняя столовая; стеклится → тёплый холл</td></tr>
+  <tr><td>Кухня-столовая-гостиная (большая)</td><td>59,5 м²</td><td>кухня у восточной стены зоны, столы на 16–20 чел, диванная зона; выход на веранду</td></tr>
+  <tr><td>Гостиная встреч</td><td>22,4 м²</td><td>совещания, переговоры, тихий отдых; в очереди 1 — временная спальня дежурного</td></tr>
+  <tr><td>Студии С-1…С-4 (север)</td><td>комната 15,8 + с/у 6,8</td><td>в каждой: душ, туалет, раковина; вход из холла; по 2 места</td></tr>
+  <tr><td>Апартаменты А-1…А-4 (юг)</td><td>15 + с/у 6,8 + прихожая 6</td><td>наружный вход с веранды + внутренний; кандидат в гостевые при агротуризме</td></tr>
+  <tr><td>Гостевые санузлы ×2</td><td>по 5,2 м²</td><td>у главного тамбура: для приезжающих и дневных гостей</td></tr>
+  <tr><td>Постирочная общая</td><td>16 м²</td><td>2 стиральные + 2 сушильные + гладильная</td></tr>
+  <tr><td>Сушка/кладовая</td><td>17,6 м²</td><td>рабочая одежда, инвентарь</td></tr>
+  <tr><td>Холл</td><td>34 м²</td><td>связывает все студии; окон нет — свет через фрамуги над дверями студий (решает конструктор)</td></tr>
+  <tr><td>Тамбур главный</td><td>16 м²</td><td>юго-восток, со стороны парковки; тепловой шлюз</td></tr>
+  <tr><td>Котельная</td><td>11,6 м²</td><td>2 котла; дровяник снаружи</td></tr>
+  <tr><td>Офис + кабинеты ×2</td><td>18 + 9 + 9 м²</td><td>рабочее крыло со своим входом — очередью 3</td></tr>
+  <tr><td>Веранда</td><td>≈ 68 м² (холодная)</td><td>входы апартаментов, летняя столовая; стеклится → тёплый тамбур</td></tr>
 </table>
 
 <h2>6. Открытые вопросы эскиза (решаются вместе с вами)</h2>
 <ul>
-  <li><strong>Число мест:</strong> сейчас 7 спален (14–16 мест) — достаточно для команды 13–16 по плану, или добавить 8-ю спальню за счёт гостиной встреч (+12 м²)?</li>
-  <li><strong>Веранда:</strong> сразу стеклить (плюс ≈ 250–400 тыс ₽, но +тёплый тамбур) или холодной, стекло — очередью позже?</li>
-  <li><strong>Ориентация участка:</strong> апартаменты и веранда — строго на юг; окончательно после объезда (LAND-STEP-1, решение Р1).</li>
-  <li><strong>Крыло 3 (офисное)</strong> — можно и не строить отдельно, а кабинеты разместить в корпусе (−36 м², −30–50 тыс ₽): сказать, как важна отдельная рабочая зона.</li>
+  <li><strong>Цена студийности:</strong> все 8 номеров с с/у = 10 санузлов суммарно. Гибрид-вариант: северные 4 комнаты — обычные спальни с 2 общими с/у у холла (−4 душа, ≈ −0,5–0,7 млн ₽) — сказать, критичен ли бюджет или автономность каждой студии принципиальна.</li>
+  <li><strong>Веранда:</strong> стеклить сразу (плюс ≈ 250–400 тыс ₽ — получается тёплый главный тамбур) или холодной до лучших времён?</li>
+  <li><strong>Ориентация участка:</strong> апартаменты и веранда — на юг; окончательно после объезда (LAND-STEP-1, решение Р1).</li>
+  <li><strong>Офисное крыло</strong> — очередью 3 или кабинеты внутри корпуса (−36 м²)?</li>
 </ul>
 
 <h2>7. Что дальше</h2>
 <ol>
   <li>Правки по эскизу — комментариями на GitHub или списком (перерисую схемы).</li>
-  <li>После объезда территории — привязка к участку: ориентация, ветра, въезд, септик, скважина.</li>
+  <li>После объезда территории — привязка к участку: ориентация, ветра, въезд, септик, скважина, дровяник.</li>
   <li>Рабочий проект первой очереди у конструктора (40–80 тыс ₽) — заказ под сезон (апрель–май).</li>
-  <li>Фундамент: сваи или мелкозаглублённая лента — решение конструктора; дешевле сразу под весь корпус 26 × 12.</li>
+  <li>Фундамент: сваи или мелкозаглублённая лента; дешевле сразу под весь корпус 26 × 15.</li>
 </ol>
 <p class="back"><a href="plan.html">← Вернуться к плану развития</a></p>
 </main>
