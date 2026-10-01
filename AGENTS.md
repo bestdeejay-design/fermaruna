@@ -22,7 +22,7 @@ SITE_BASE_URL=https://fermaruna.ru python3 scripts/build.py
 
 ## Деплой на хостинг (SpaceWeb)
 
-**Одна команда:** `scripts/deploy.sh` (после сборки — dry-run, подтверждение, rsync, проверка URL).
+**Автоматически:** push в `main` → GitHub Actions собирает и выкладывает сам (workflow `deploy-hosting.yml`, секреты `DEPLOY_*`). Ручные способы: `gh workflow run deploy-hosting.yml --ref main` или локально `scripts/deploy.sh`. Требует, чтобы `content/` и сгенерированные файлы были закоммичены — CI собирает из репозитория, не из вашей рабочей копии.
 
 Инварианты (нарушать нельзя):
 

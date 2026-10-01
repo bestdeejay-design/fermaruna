@@ -31,7 +31,9 @@ SITE_BASE_URL=https://fermaruna.ru python3 scripts/build.py
 
 ## 3. Деплой
 
-**Рекомендуемый способ — скрипт-обёртка** (сборка + dry-run + подтверждение + rsync + проверка URL):
+**Основной способ — автоматический (GitHub Actions):** при каждом пуше в `main` workflow `.github/workflows/deploy-hosting.yml` сам собирает сайт с боевым адресом, rsync-ом выкладывает на SpaceWeb и проверяет живые URL. Секреты репозитория: `DEPLOY_SSH_KEY` (выделенный ключ деплоя, не основной), `DEPLOY_HOST`, `DEPLOY_USER`. Статус: `gh run list --workflow=deploy-hosting.yml`. Ручной запуск: `gh workflow run deploy-hosting.yml --ref main`.
+
+**Резервный способ — локальный скрипт** (если Actions недоступен): (сборка + dry-run + подтверждение + rsync + проверка URL):
 
 ```bash
 ./scripts/deploy.sh          # спросит подтверждение
