@@ -73,6 +73,20 @@ Copy `config.example.php` to `config.php` on the server and set the recipient ad
 
 [`send.php`](send.php) accepts `POST` only, expects `name`, `contact`, `consent` (plus optional `product`, `message`), returns JSON. Without a valid `config.php` it answers `503 not_configured`. Nothing is stored on the server.
 
+## Project docs (`docs/`)
+
+`docs/PLAN.md` — farm development plan · `docs/AUDIT-2026-10.md` — plan audit · `docs/LAND-STEP-1.md` — land step 1 (all in Russian). They read as Markdown on GitHub; the one-page HTML version with a sidebar TOC is `plan.html` at the repo root, served by GitHub Pages: <https://bestdeejay-design.github.io/fermaruna/plan.html>.
+
+Rebuild `plan.html` after editing the docs (requires pandoc):
+
+```bash
+cat docs/PLAN.md > /tmp/plan-merged.md
+printf '\n\n---\n\n%s\n\n---\n\n%s\n' "$(cat docs/AUDIT-2026-10.md)" "$(cat docs/LAND-STEP-1.md)" >> /tmp/plan-merged.md
+pandoc -f gfm -s --toc --toc-depth=2 --template=docs/plan-template.html \
+  --metadata title="Ферма «Рунская» — план развития хозяйства" \
+  -c docs/plan.css -o plan.html /tmp/plan-merged.md
+```
+
 ## SEO note
 
 Canonical is `http://fermaruna.ru` (see `robots.txt` sitemap line and canonical tags in generated HTML). HTTPS is not configured yet, so the `.htaccess` HTTPS redirect stays commented out. Meta: OG/Twitter cards, JSON-LD (LocalBusiness, FAQ, articles, breadcrumbs), per-article descriptions with length warnings in the build log.

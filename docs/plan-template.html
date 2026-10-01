@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>$title$</title>
+$for(css)$
+<link rel="stylesheet" href="$css$">
+$endfor$
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="doc-title">$title$</div>
+    <nav id="TOC" role="doc-toc">
+    $table-of-contents$
+    </nav>
+  </aside>
+  <main class="content">
+    $body$
+  </main>
+</div>
+<button id="toTop" aria-label="Наверх" title="Наверх">↑</button>
+<script>
+(function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll('.sidebar #TOC a'));
+  var map = new Map();
+  links.forEach(function (a) {
+    var href = a.getAttribute('href') || '';
+    if (href.charAt(0) !== '#') return;
+    var el = document.getElementById(decodeURIComponent(href.slice(1)));
+    if (el) map.set(el, a);
+  });
+  var heads = Array.from(map.keys()).sort(function (a, b) {
+    return a.getBoundingClientRect().top - b.getBoundingClientRect().top;
+  });
+  function spy() {
+    var cur = heads[0];
+    heads.forEach(function (h) { if (h.getBoundingClientRect().top <= 140) cur = h; });
+    links.forEach(function (l) { l.classList.remove('active'); });
+    if (cur) { var a = map.get(cur); if (a) a.classList.add('active'); }
+  }
+  window.addEventListener('scroll', spy, { passive: true });
+  window.addEventListener('resize', spy);
+  spy();
+
+  var toTop = document.getElementById('toTop');
+  function toggleTop() { toTop.classList.toggle('show', window.scrollY > 900); }
+  window.addEventListener('scroll', toggleTop, { passive: true });
+  toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+})();
+</script>
+</body>
+</html>

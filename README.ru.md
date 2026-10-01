@@ -73,6 +73,20 @@ rsync -av --exclude='.git' ./ user@host:/path/to/www/
 
 [`send.php`](send.php) принимает только `POST`, ждёт `name`, `contact`, `consent` (плюс необязательные `product`, `message`), отвечает JSON. Без корректного `config.php` отвечает `503 not_configured`. На сервере ничего не хранится.
 
+## Документы проекта (`docs/`)
+
+`docs/PLAN.md` — план развития хозяйства · `docs/AUDIT-2026-10.md` — аудит плана · `docs/LAND-STEP-1.md` — шаг 1 по освоению 1500 га. Читаются на GitHub как Markdown; HTML-версия одной страницей с боковым оглавлением — `plan.html` в корне, открывается на GitHub Pages: <https://bestdeejay-design.github.io/fermaruna/plan.html>.
+
+Пересборка `plan.html` после правок документов (нужен pandoc):
+
+```bash
+cat docs/PLAN.md > /tmp/plan-merged.md
+printf '\n\n---\n\n%s\n\n---\n\n%s\n' "$(cat docs/AUDIT-2026-10.md)" "$(cat docs/LAND-STEP-1.md)" >> /tmp/plan-merged.md
+pandoc -f gfm -s --toc --toc-depth=2 --template=docs/plan-template.html \
+  --metadata title="Ферма «Рунская» — план развития хозяйства" \
+  -c docs/plan.css -o plan.html /tmp/plan-merged.md
+```
+
 ## Заметка про SEO
 
 Канонический адрес `http://fermaruna.ru` (строка sitemap в `robots.txt` и canonical-теги в сгенерированном HTML). HTTPS пока не настроен, поэтому редирект на HTTPS в `.htaccess` остаётся закомментированным. Разметка: OG/Twitter-карточки, JSON-LD (LocalBusiness, FAQ, статьи, хлебные крошки), у каждой статьи своё описание, предупреждения о длине выводятся в лог сборки.
