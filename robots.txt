@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /send.php
 
-Sitemap: https://bestdeejay-design.github.io/fermaruna/sitemap.xml
+Sitemap: http://fermaruna.ru/sitemap.xml
