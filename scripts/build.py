@@ -486,6 +486,9 @@ HERO_ROTATE = [
     ("hens", "Куры и индюк на выгуле у деревянного сарая", "50% 55%"),
     ("geese", "Белые гуси и индюк на траве у деревянной изгороди", "50% 50%"),
     ("potatoes", "Деревянный ящик с белым и красным картофелем на земле", "50% 55%"),
+    ("dawn", "Рассвет над туманным полем у леса", "50% 50%"),
+    ("plowed", "Вспаханное поле рядами на закате", "50% 60%"),
+    ("barnyard", "Гуси, куры и индюк у старого деревянного сарая", "50% 55%"),
 ]
 
 
@@ -531,7 +534,9 @@ def hero_home_img(root: str, alt: str) -> str:
         '<script>(function(){var p=window.__heroPick;if(!p)return;'
         'var i=document.currentScript.previousElementSibling;'
         'if(!i||i.className.indexOf("hero__img")<0)return;'
-        'i.src=p.b;i.srcset=p.g;i.width=p.x;i.height=p.y;i.alt=p.a;i.style.objectPosition=p.p;})();</script>'
+        'var t=new Image();t.onload=function(){'
+        'i.src=p.b;i.srcset=p.g;i.width=p.x;i.height=p.y;i.alt=p.a;i.style.objectPosition=p.p;};'
+        't.decoding="async";t.sizes="100vw";t.srcset=p.g;t.src=p.b;})();</script>'
     )
     return img_tag + apply_script
 
